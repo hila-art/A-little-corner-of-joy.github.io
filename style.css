@@ -1,0 +1,3158 @@
+/* ========================================
+
+A LITTLE CORNER OF JOY
+style.css
+Part 1
+
+======================================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+
+    font-family:"Quicksand",sans-serif;
+
+    background:linear-gradient(
+        180deg,
+        #fff8fb 0%,
+        #fff3f8 40%,
+        #fffdfd 100%
+    );
+
+    color:#6f6470;
+
+    min-height:100vh;
+
+    overflow-x:hidden;
+
+}
+
+/* ========================= */
+
+.hidden{
+    display:none !important;
+}
+
+/* ========================= */
+/* LOGIN */
+/* ========================= */
+
+#login-screen{
+
+    min-height:100vh;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    padding:40px;
+
+}
+
+.login-card{
+
+    width:430px;
+
+    background:rgba(255,255,255,.8);
+
+    backdrop-filter:blur(18px);
+
+    border-radius:35px;
+
+    padding:45px;
+
+    box-shadow:
+
+    0 15px 50px rgba(255,183,212,.25);
+
+    text-align:center;
+
+}
+
+.login-card h1{
+
+    font-family:"Caveat",cursive;
+
+    font-size:56px;
+
+    color:#d885aa;
+
+    margin-bottom:15px;
+
+}
+
+.subtitle{
+
+    color:#96808e;
+
+    margin-bottom:35px;
+
+}
+
+.login-card input{
+
+    width:100%;
+
+    padding:16px;
+
+    margin-bottom:18px;
+
+    border:none;
+
+    border-radius:18px;
+
+    background:#fff8fb;
+
+    font-size:16px;
+
+    outline:none;
+
+    transition:.3s;
+
+}
+
+.login-card input:focus{
+
+    box-shadow:0 0 0 3px #ffd8e8;
+
+}
+
+.login-card button{
+
+    width:100%;
+
+    padding:16px;
+
+    border:none;
+
+    border-radius:18px;
+
+    cursor:pointer;
+
+    background:#f6b7d4;
+
+    color:white;
+
+    font-size:17px;
+
+    font-weight:700;
+
+    transition:.35s;
+
+}
+
+.login-card button:hover{
+
+    transform:translateY(-4px);
+
+    background:#ef9fc3;
+
+}
+
+/* ========================= */
+/* APP */
+/* ========================= */
+
+#app{
+
+    min-height:100vh;
+
+}
+
+/* ========================= */
+/* HEADER */
+/* ========================= */
+
+header{
+
+    position:sticky;
+
+    top:0;
+
+    z-index:100;
+
+    background:rgba(255,255,255,.88);
+
+    backdrop-filter:blur(18px);
+
+    padding:20px 40px;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    box-shadow:
+
+    0 5px 25px rgba(255,180,210,.18);
+
+}
+
+.logo h1{
+
+    font-family:"Caveat",cursive;
+
+    color:#d885aa;
+
+    font-size:42px;
+
+}
+
+.logo p{
+
+    color:#9b8793;
+
+    font-size:14px;
+
+}
+
+/* ========================= */
+
+nav{
+
+    display:flex;
+
+    gap:12px;
+
+    align-items:center;
+
+    flex-wrap:wrap;
+
+}
+
+.nav-btn{
+
+    border:none;
+
+    background:#fff8fb;
+
+    padding:12px 20px;
+
+    border-radius:999px;
+
+    cursor:pointer;
+
+    font-size:15px;
+
+    transition:.35s;
+
+}
+
+.nav-btn:hover{
+
+    background:#f7d6e7;
+
+    transform:translateY(-2px);
+
+}
+
+.active{
+
+    background:#f5bfd8;
+
+    color:white;
+
+}
+
+#logoutBtn{
+
+    border:none;
+
+    background:#eaa6c7;
+
+    color:white;
+
+    padding:12px 20px;
+
+    border-radius:999px;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+#logoutBtn:hover{
+
+    background:#df8fb8;
+
+}
+
+/* ========================= */
+
+main{
+
+    max-width:1200px;
+
+    margin:auto;
+
+    padding:50px 30px;
+
+}
+
+/* ========================= */
+
+.page{
+
+    display:none;
+
+    animation:fade .45s;
+
+}
+
+.active-page{
+
+    display:block;
+
+}
+
+@keyframes fade{
+
+from{
+
+opacity:0;
+
+transform:translateY(15px);
+
+}
+
+to{
+
+opacity:1;
+
+transform:translateY(0);
+
+}
+
+}
+
+/* ========================= */
+/* HOME */
+/* ========================= */
+
+.welcome-card{
+
+    background:white;
+
+    border-radius:30px;
+
+    padding:35px;
+
+    margin-bottom:30px;
+
+    box-shadow:
+
+    0 12px 35px rgba(255,184,214,.18);
+
+}
+
+.welcome-card h2{
+
+    color:#d885aa;
+
+    font-size:34px;
+
+    margin-bottom:10px;
+
+}
+
+.quote-card{
+
+    background:white;
+
+    border-radius:30px;
+
+    padding:40px;
+
+    box-shadow:
+
+    0 12px 35px rgba(255,184,214,.18);
+
+}
+
+.quote-card h3{
+
+    color:#d885aa;
+
+    margin-bottom:20px;
+
+}
+
+.quote-card p{
+
+    font-size:22px;
+
+    line-height:1.8;
+
+    color:#786a74;
+
+}
+
+/* ========================= */
+
+.coming-soon{
+
+    margin-top:35px;
+
+    background:white;
+
+    padding:40px;
+
+    border-radius:30px;
+
+    text-align:center;
+
+    color:#a18b97;
+
+    box-shadow:
+
+    0 12px 35px rgba(255,184,214,.18);
+
+}
+
+/* ========================= */
+
+@media(max-width:900px){
+
+header{
+
+flex-direction:column;
+
+gap:20px;
+
+}
+
+nav{
+
+justify-content:center;
+
+}
+
+.login-card{
+
+width:100%;
+
+}
+
+.logo{
+
+text-align:center;
+
+}
+
+}
+
+#login-screen.hidden,
+#app.hidden{
+    display:none !important;
+}
+
+/* =========================================
+   HAPPY LIST
+========================================= */
+
+.page-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 25px;
+    margin-bottom: 30px;
+}
+
+.page-heading h2 {
+    color: #d885aa;
+    font-size: 36px;
+    margin-bottom: 8px;
+}
+
+.small-heading {
+    color: #c493aa;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+}
+
+.page-description {
+    color: #8f7d88;
+    line-height: 1.7;
+}
+
+.happy-counter {
+    min-width: 130px;
+    background: white;
+    border-radius: 24px;
+    padding: 18px 22px;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(255, 184, 214, 0.18);
+    color: #9a7f8d;
+}
+
+.happy-counter span {
+    display: block;
+    color: #d885aa;
+    font-size: 32px;
+    font-weight: 700;
+}
+
+/* =========================================
+   HAPPY LIST LAYOUT
+========================================= */
+
+.happy-layout {
+    display: grid;
+    grid-template-columns: 360px 1fr;
+    gap: 30px;
+    align-items: start;
+}
+
+.happy-form-card,
+.happy-list-card {
+    background: rgba(255, 255, 255, 0.92);
+    border-radius: 30px;
+    padding: 30px;
+    box-shadow: 0 12px 35px rgba(255, 184, 214, 0.18);
+}
+
+.happy-form-card {
+    position: sticky;
+    top: 145px;
+}
+
+.happy-form-card h3,
+.happy-list-card h3 {
+    color: #d885aa;
+    margin-bottom: 22px;
+    font-size: 23px;
+}
+
+/* =========================================
+   HAPPY FORM
+========================================= */
+
+.happy-form-card label {
+    display: block;
+    margin: 18px 0 8px;
+    color: #806e79;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.happy-form-card input,
+.happy-form-card textarea,
+.happy-form-card select,
+.happy-tools input,
+.happy-tools select {
+    width: 100%;
+    border: 2px solid transparent;
+    outline: none;
+    background: #fff7fa;
+    color: #6f6470;
+    border-radius: 17px;
+    padding: 14px 15px;
+    font-family: "Quicksand", sans-serif;
+    font-size: 15px;
+    transition: 0.25s;
+}
+
+.happy-form-card textarea {
+    min-height: 125px;
+    resize: vertical;
+    line-height: 1.6;
+}
+
+.happy-form-card input:focus,
+.happy-form-card textarea:focus,
+.happy-form-card select:focus,
+.happy-tools input:focus,
+.happy-tools select:focus {
+    border-color: #f5bfd8;
+    background: white;
+    box-shadow: 0 0 0 4px rgba(245, 191, 216, 0.2);
+}
+
+.primary-button {
+    width: 100%;
+    border: none;
+    margin-top: 24px;
+    padding: 15px 20px;
+    border-radius: 18px;
+    background: linear-gradient(135deg, #f4b6d3, #e99fc3);
+    color: white;
+    font-family: "Quicksand", sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+    box-shadow: 0 10px 22px rgba(230, 145, 185, 0.24);
+    transition: 0.3s;
+}
+
+.primary-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 14px 26px rgba(230, 145, 185, 0.32);
+}
+
+.primary-button:active {
+    transform: translateY(0);
+}
+
+.form-message {
+    min-height: 20px;
+    margin-top: 12px;
+    color: #cc759f;
+    font-size: 14px;
+    text-align: center;
+}
+
+/* =========================================
+   HAPPY LIST HEADER
+========================================= */
+
+.happy-list-top {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 20px;
+    margin-bottom: 22px;
+}
+
+.text-button {
+    border: none;
+    background: transparent;
+    color: #c67e9f;
+    font-family: "Quicksand", sans-serif;
+    font-weight: 700;
+    cursor: pointer;
+    padding: 8px;
+    border-radius: 12px;
+    transition: 0.25s;
+}
+
+.text-button:hover {
+    background: #fff1f7;
+}
+
+/* =========================================
+   SEARCH AND FILTER
+========================================= */
+
+.happy-tools {
+    display: grid;
+    grid-template-columns: 1fr 190px;
+    gap: 14px;
+    margin-bottom: 24px;
+}
+
+.search-box {
+    position: relative;
+}
+
+.search-box span {
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    pointer-events: none;
+}
+
+.search-box input {
+    padding-left: 44px;
+}
+
+/* =========================================
+   SAVED HAPPY ITEMS
+========================================= */
+
+.happy-items {
+    display: grid;
+    gap: 16px;
+}
+
+.happy-item {
+    background: linear-gradient(135deg, #fff8fb, #fffdfd);
+    border: 1px solid #ffe1ed;
+    border-radius: 23px;
+    padding: 20px;
+    animation: happyItemIn 0.35s ease;
+    transition: 0.3s;
+}
+
+.happy-item:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(255, 184, 214, 0.16);
+}
+
+@keyframes happyItemIn {
+    from {
+        opacity: 0;
+        transform: translateY(12px) scale(0.98);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+.happy-item-top {
+    display: flex;
+    justify-content: space-between;
+    gap: 18px;
+    align-items: flex-start;
+}
+
+.happy-item-title {
+    color: #b86e94;
+    font-size: 19px;
+    margin-bottom: 8px;
+}
+
+.happy-item-description {
+    color: #796a73;
+    line-height: 1.65;
+    white-space: pre-wrap;
+    overflow-wrap: anywhere;
+}
+
+.happy-item-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 14px;
+    margin-top: 16px;
+}
+
+.happy-category {
+    display: inline-flex;
+    align-items: center;
+    background: #fce5ef;
+    color: #ad688b;
+    border-radius: 999px;
+    padding: 7px 12px;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.happy-date {
+    color: #ae9aa5;
+    font-size: 12px;
+}
+
+.happy-actions {
+    display: flex;
+    gap: 8px;
+}
+
+.happy-action-button {
+    border: none;
+    width: 36px;
+    height: 36px;
+    border-radius: 12px;
+    background: white;
+    cursor: pointer;
+    transition: 0.25s;
+}
+
+.happy-action-button:hover {
+    transform: translateY(-2px);
+    background: #fce8f1;
+}
+
+/* =========================================
+   EMPTY STATE
+========================================= */
+
+.empty-state {
+    text-align: center;
+    padding: 50px 20px;
+    color: #a18c97;
+}
+
+.empty-state-icon {
+    font-size: 50px;
+    margin-bottom: 14px;
+}
+
+.empty-state h4 {
+    color: #c27a9c;
+    font-size: 20px;
+    margin-bottom: 8px;
+}
+
+.empty-state.hidden {
+    display: none !important;
+}
+
+/* =========================================
+   RESPONSIVE HAPPY LIST
+========================================= */
+
+@media (max-width: 900px) {
+    .page-heading {
+        flex-direction: column;
+    }
+
+    .happy-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .happy-form-card {
+        position: static;
+    }
+}
+
+@media (max-width: 620px) {
+    .happy-tools {
+        grid-template-columns: 1fr;
+    }
+
+    .happy-list-top {
+        flex-direction: column;
+    }
+
+    .happy-item-top,
+    .happy-item-footer {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .happy-actions {
+        align-self: flex-end;
+    }
+}
+
+/* =========================================
+   PHOTOS PAGE
+========================================= */
+
+.photo-counter {
+    min-width: 130px;
+    background: white;
+    border-radius: 24px;
+    padding: 18px 22px;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(255, 184, 214, 0.18);
+    color: #9a7f8d;
+}
+
+.photo-counter span {
+    display: block;
+    color: #d885aa;
+    font-size: 32px;
+    font-weight: 700;
+}
+
+.photos-layout {
+    display: grid;
+    grid-template-columns: 360px 1fr;
+    gap: 30px;
+    align-items: start;
+}
+
+.photo-upload-card,
+.photo-gallery-card {
+    background: rgba(255, 255, 255, 0.92);
+    border-radius: 30px;
+    padding: 30px;
+    box-shadow: 0 12px 35px rgba(255, 184, 214, 0.18);
+}
+
+.photo-upload-card {
+    position: sticky;
+    top: 145px;
+}
+
+.photo-upload-card h3,
+.photo-gallery-card h3 {
+    color: #d885aa;
+    margin-bottom: 22px;
+    font-size: 23px;
+}
+
+/* =========================================
+   PHOTO UPLOAD
+========================================= */
+
+.photo-upload-area {
+    display: flex;
+    min-height: 190px;
+    padding: 25px;
+    border: 2px dashed #f2b8d2;
+    border-radius: 24px;
+    background: linear-gradient(135deg, #fff8fb, #fffdfd);
+    cursor: pointer;
+    text-align: center;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: 0.3s;
+}
+
+.photo-upload-area:hover {
+    border-color: #df91b8;
+    background: #fff2f7;
+    transform: translateY(-2px);
+}
+
+.photo-upload-area.dragging {
+    border-style: solid;
+    border-color: #d885aa;
+    background: #ffeaf3;
+    transform: scale(1.01);
+}
+
+.photo-upload-icon {
+    font-size: 48px;
+    margin-bottom: 10px;
+}
+
+.photo-upload-title {
+    color: #b97095;
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+
+.photo-upload-text {
+    color: #a08a96;
+    font-size: 14px;
+}
+
+.photo-preview-box {
+    margin-top: 18px;
+    padding: 12px;
+    border-radius: 22px;
+    background: #fff7fa;
+    text-align: center;
+}
+
+.photo-preview-box img {
+    display: block;
+    width: 100%;
+    max-height: 270px;
+    object-fit: cover;
+    border-radius: 17px;
+}
+
+.remove-preview-button {
+    border: none;
+    margin-top: 12px;
+    padding: 9px 15px;
+    border-radius: 999px;
+    background: #fce3ee;
+    color: #b56f92;
+    font-family: "Quicksand", sans-serif;
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.25s;
+}
+
+.remove-preview-button:hover {
+    background: #f6cadc;
+}
+
+.photo-upload-card label:not(.photo-upload-area) {
+    display: block;
+    margin: 18px 0 8px;
+    color: #806e79;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.photo-upload-card input[type="text"],
+.photo-upload-card textarea,
+.photo-gallery-tools input,
+.photo-gallery-tools select {
+    width: 100%;
+    border: 2px solid transparent;
+    outline: none;
+    background: #fff7fa;
+    color: #6f6470;
+    border-radius: 17px;
+    padding: 14px 15px;
+    font-family: "Quicksand", sans-serif;
+    font-size: 15px;
+    transition: 0.25s;
+}
+
+.photo-upload-card textarea {
+    min-height: 125px;
+    resize: vertical;
+    line-height: 1.6;
+}
+
+.photo-upload-card input:focus,
+.photo-upload-card textarea:focus,
+.photo-gallery-tools input:focus,
+.photo-gallery-tools select:focus {
+    border-color: #f5bfd8;
+    background: white;
+    box-shadow: 0 0 0 4px rgba(245, 191, 216, 0.2);
+}
+
+/* =========================================
+   PHOTO GALLERY HEADER
+========================================= */
+
+.photo-gallery-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 20px;
+    margin-bottom: 22px;
+}
+
+.photo-gallery-tools {
+    display: grid;
+    grid-template-columns: 1fr 160px;
+    gap: 14px;
+    margin-bottom: 25px;
+}
+
+/* =========================================
+   PHOTO GRID
+========================================= */
+
+.photo-gallery {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 18px;
+}
+
+.photo-card {
+    position: relative;
+    overflow: hidden;
+    background: #fff8fb;
+    border: 1px solid #ffe0ec;
+    border-radius: 24px;
+    box-shadow: 0 8px 22px rgba(236, 164, 196, 0.14);
+    transition: 0.3s;
+    animation: photoCardIn 0.4s ease;
+}
+
+.photo-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 14px 30px rgba(236, 164, 196, 0.22);
+}
+
+@keyframes photoCardIn {
+    from {
+        opacity: 0;
+        transform: translateY(12px) scale(0.98);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+.photo-card-image-wrapper {
+    position: relative;
+    aspect-ratio: 4 / 3;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.photo-card-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: 0.4s;
+}
+
+.photo-card:hover .photo-card-image {
+    transform: scale(1.04);
+}
+
+.photo-card-overlay {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    padding: 14px;
+    background: linear-gradient(
+        to top,
+        rgba(72, 45, 59, 0.56),
+        transparent 60%
+    );
+    opacity: 0;
+    transition: 0.3s;
+}
+
+.photo-card:hover .photo-card-overlay {
+    opacity: 1;
+}
+
+.photo-view-text {
+    color: white;
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.photo-favorite-button {
+    border: none;
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.9);
+    color: #c27399;
+    font-size: 20px;
+    cursor: pointer;
+    transition: 0.25s;
+}
+
+.photo-favorite-button:hover {
+    transform: scale(1.08);
+}
+
+.photo-favorite-button.is-favorite {
+    background: #f7bdd6;
+    color: white;
+}
+
+.photo-card-details {
+    padding: 17px;
+}
+
+.photo-card-caption {
+    color: #b66d92;
+    font-size: 17px;
+    margin-bottom: 7px;
+    overflow-wrap: anywhere;
+}
+
+.photo-card-story {
+    display: -webkit-box;
+    overflow: hidden;
+    color: #7d6e77;
+    line-height: 1.55;
+    font-size: 14px;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow-wrap: anywhere;
+}
+
+.photo-card-date {
+    display: block;
+    margin-top: 12px;
+    color: #ae9ba5;
+    font-size: 12px;
+}
+
+/* =========================================
+   PHOTO MODAL
+========================================= */
+
+.photo-modal {
+    position: fixed;
+    inset: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 25px;
+}
+
+.photo-modal-backdrop {
+    position: absolute;
+    inset: 0;
+    background: rgba(71, 49, 60, 0.62);
+    backdrop-filter: blur(9px);
+}
+
+.photo-modal-content {
+    position: relative;
+    z-index: 1;
+    width: min(920px, 100%);
+    max-height: 90vh;
+    overflow: auto;
+    display: grid;
+    grid-template-columns: minmax(0, 1.25fr) minmax(280px, 0.75fr);
+    background: white;
+    border-radius: 30px;
+    box-shadow: 0 25px 70px rgba(64, 38, 52, 0.3);
+    animation: photoModalIn 0.35s ease;
+}
+
+@keyframes photoModalIn {
+    from {
+        opacity: 0;
+        transform: scale(0.94) translateY(15px);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1) translateY(0);
+    }
+}
+
+.photo-modal-content > img {
+    width: 100%;
+    height: 100%;
+    min-height: 430px;
+    max-height: 78vh;
+    object-fit: cover;
+    background: #fff4f8;
+}
+
+.photo-modal-details {
+    padding: 45px 30px 30px;
+}
+
+.photo-modal-details h3 {
+    color: #bd7297;
+    font-size: 25px;
+    margin-bottom: 16px;
+    overflow-wrap: anywhere;
+}
+
+.photo-modal-details p {
+    color: #796b74;
+    line-height: 1.75;
+    white-space: pre-wrap;
+    overflow-wrap: anywhere;
+}
+
+.photo-modal-close {
+    position: absolute;
+    right: 16px;
+    top: 13px;
+    z-index: 3;
+    width: 40px;
+    height: 40px;
+    border: none;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.92);
+    color: #ac6889;
+    font-size: 28px;
+    line-height: 1;
+    cursor: pointer;
+    box-shadow: 0 5px 16px rgba(70, 44, 57, 0.18);
+    transition: 0.25s;
+}
+
+.photo-modal-close:hover {
+    transform: rotate(6deg) scale(1.05);
+}
+
+.photo-modal-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 28px;
+}
+
+.secondary-button,
+.danger-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    border-radius: 15px;
+    padding: 11px 15px;
+    font-family: "Quicksand", sans-serif;
+    font-weight: 700;
+    text-decoration: none;
+    cursor: pointer;
+    transition: 0.25s;
+}
+
+.secondary-button {
+    background: #fbe5ef;
+    color: #ad688b;
+}
+
+.secondary-button:hover {
+    background: #f4c8dc;
+    transform: translateY(-2px);
+}
+
+.danger-button {
+    background: #fff0f1;
+    color: #c66e77;
+}
+
+.danger-button:hover {
+    background: #ffdadd;
+    transform: translateY(-2px);
+}
+
+body.modal-open {
+    overflow: hidden;
+}
+
+/* =========================================
+   RESPONSIVE PHOTOS
+========================================= */
+
+@media (max-width: 950px) {
+    .photos-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .photo-upload-card {
+        position: static;
+    }
+}
+
+@media (max-width: 760px) {
+    .photo-gallery {
+        grid-template-columns: 1fr;
+    }
+
+    .photo-modal-content {
+        grid-template-columns: 1fr;
+    }
+
+    .photo-modal-content > img {
+        min-height: 280px;
+        max-height: 50vh;
+    }
+
+    .photo-modal-details {
+        padding: 28px 22px;
+    }
+}
+
+@media (max-width: 620px) {
+    .photo-gallery-top {
+        flex-direction: column;
+    }
+
+    .photo-gallery-tools {
+        grid-template-columns: 1fr;
+    }
+
+    .photo-modal {
+        padding: 12px;
+    }
+
+    .photo-modal-buttons {
+        flex-direction: column;
+    }
+
+    .secondary-button,
+    .danger-button {
+        width: 100%;
+    }
+}
+
+/* =========================================
+   INSPIRATION BOARD
+========================================= */
+
+/* =========================================
+   INSPIRATION PAGE — VIEW ONLY
+========================================= */
+
+.inspiration-categories {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 28px;
+}
+
+.inspiration-category-button {
+    border: none;
+    padding: 11px 17px;
+    border-radius: 999px;
+
+    background: white;
+    color: #806e79;
+
+    font-family: "Quicksand", sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 7px 20px rgba(255, 184, 214, 0.12);
+
+    transition: 0.25s;
+}
+
+.inspiration-category-button:hover {
+    transform: translateY(-2px);
+    background: #fff0f6;
+}
+
+.active-inspiration-category {
+    background: linear-gradient(
+        135deg,
+        #f4b6d3,
+        #e99fc3
+    );
+
+    color: white;
+}
+
+/* =========================================
+   PINTEREST-STYLE GALLERY
+========================================= */
+
+.inspiration-gallery {
+    columns: 3 250px;
+    column-gap: 20px;
+}
+
+.inspiration-photo-card {
+    position: relative;
+
+    width: 100%;
+
+    margin-bottom: 20px;
+
+    break-inside: avoid;
+
+    overflow: hidden;
+
+    border-radius: 26px;
+
+    background: white;
+
+    box-shadow:
+        0 10px 28px rgba(228, 157, 190, 0.16);
+
+    transition: 0.3s;
+}
+
+.inspiration-photo-card:hover {
+    transform: translateY(-5px);
+
+    box-shadow:
+        0 16px 38px rgba(228, 157, 190, 0.24);
+}
+
+.inspiration-photo-card img {
+    display: block;
+
+    width: 100%;
+
+    height: 300px;
+
+    object-fit: cover;
+
+    transition: 0.45s;
+}
+
+.inspiration-photo-card.tall img {
+    height: 420px;
+}
+
+.inspiration-photo-card:hover img {
+    transform: scale(1.035);
+}
+
+/* =========================================
+   TEXT OVER IMAGE
+========================================= */
+
+.inspiration-photo-text {
+    position: absolute;
+
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    padding: 55px 20px 20px;
+
+    background: linear-gradient(
+        to top,
+        rgba(74, 47, 61, 0.68),
+        rgba(74, 47, 61, 0)
+    );
+
+    color: white;
+}
+
+.inspiration-photo-text span {
+    display: inline-block;
+
+    margin-bottom: 6px;
+
+    padding: 6px 10px;
+
+    border-radius: 999px;
+
+    background: rgba(255, 255, 255, 0.2);
+
+    backdrop-filter: blur(8px);
+
+    font-size: 11px;
+    font-weight: 700;
+}
+
+.inspiration-photo-text h3 {
+    color: white;
+
+    font-size: 19px;
+
+    line-height: 1.3;
+
+    text-shadow:
+        0 2px 10px rgba(55, 34, 45, 0.3);
+}
+
+/* =========================================
+   FILTER ANIMATION
+========================================= */
+
+.inspiration-photo-card.inspiration-hidden {
+    display: none;
+}
+
+.inspiration-photo-card {
+    animation: inspirationCardIn 0.4s ease;
+}
+
+@keyframes inspirationCardIn {
+
+    from {
+        opacity: 0;
+        transform: translateY(12px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 900px) {
+
+    .inspiration-gallery {
+        columns: 2 240px;
+    }
+}
+
+@media (max-width: 600px) {
+
+    .inspiration-categories {
+        gap: 8px;
+    }
+
+    .inspiration-category-button {
+        padding: 10px 14px;
+        font-size: 13px;
+    }
+
+    .inspiration-gallery {
+        columns: 1;
+    }
+
+    .inspiration-photo-card img,
+    .inspiration-photo-card.tall img {
+        height: auto;
+        max-height: 500px;
+    }
+}
+
+/* =========================================
+   SPOTIFY PLAYLIST PAGE
+========================================= */
+
+.spotify-playlists-page {
+    width: min(1250px, 92%);
+    margin: 0 auto;
+    padding: 45px 0 80px;
+}
+
+.spotify-playlists-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 25px;
+    margin-bottom: 28px;
+}
+
+.spotify-page-label {
+    margin-bottom: 7px;
+    color: #c1779d;
+    font-weight: 700;
+}
+
+.spotify-playlists-header h2 {
+    margin-bottom: 10px;
+    color: #b96f95;
+    font-size: clamp(32px, 5vw, 50px);
+}
+
+.spotify-page-description {
+    max-width: 600px;
+    color: #806d78;
+    line-height: 1.7;
+}
+
+.spotify-playlist-counter {
+    min-width: 145px;
+    padding: 20px;
+    border-radius: 28px;
+    background: rgba(255, 255, 255, 0.94);
+    text-align: center;
+    box-shadow: 0 12px 32px rgba(189, 113, 151, 0.13);
+}
+
+.spotify-playlist-counter span {
+    display: block;
+    color: #d17da7;
+    font-size: 35px;
+    font-weight: 700;
+}
+
+.spotify-playlist-counter p {
+    margin: 3px 0 0;
+    color: #8f7b86;
+}
+
+/* Mood buttons */
+
+.spotify-mood-filters {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 28px;
+}
+
+.spotify-mood-button {
+    padding: 10px 17px;
+    border: none;
+    border-radius: 999px;
+    background: white;
+    color: #806d78;
+    font-family: inherit;
+    font-weight: 700;
+    cursor: pointer;
+    box-shadow: 0 6px 18px rgba(189, 113, 151, 0.08);
+    transition: 0.22s;
+}
+
+.spotify-mood-button:hover {
+    transform: translateY(-2px);
+}
+
+.active-spotify-mood {
+    background: #e8a9c7;
+    color: white;
+}
+
+/* Main layout */
+
+.spotify-playlists-layout {
+    display: grid;
+    grid-template-columns: 330px minmax(0, 1fr);
+    gap: 28px;
+    align-items: start;
+}
+
+.spotify-playlist-form-card,
+.spotify-playlist-collection-card {
+    padding: 27px;
+    border-radius: 30px;
+    background: rgba(255, 255, 255, 0.94);
+    box-shadow: 0 12px 38px rgba(189, 113, 151, 0.12);
+}
+
+.spotify-playlist-form-card {
+    position: sticky;
+    top: 120px;
+}
+
+.spotify-playlist-form-card h3,
+.spotify-playlist-collection-card h3 {
+    color: #b96f95;
+    font-size: 23px;
+}
+
+.spotify-form-description {
+    margin: 9px 0 21px;
+    color: #897580;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+/* Cover upload */
+
+.spotify-cover-upload {
+    min-height: 175px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 19px;
+    padding: 20px;
+    border: 2px dashed #efb6d1;
+    border-radius: 23px;
+    background: #fff7fb;
+    text-align: center;
+    cursor: pointer;
+    transition: 0.22s;
+}
+
+.spotify-cover-upload:hover,
+.spotify-cover-upload.dragging {
+    border-color: #cf7ca5;
+    background: #ffedf5;
+}
+
+.spotify-upload-icon {
+    font-size: 43px;
+}
+
+.spotify-upload-title {
+    margin-top: 9px;
+    color: #b96f95;
+    font-weight: 700;
+}
+
+.spotify-upload-subtitle {
+    margin-top: 4px;
+    color: #a18d98;
+    font-size: 13px;
+}
+
+.spotify-cover-preview-box {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.spotify-cover-preview-box img {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    display: block;
+    margin-bottom: 10px;
+    border-radius: 22px;
+    object-fit: cover;
+}
+
+/* Form fields */
+
+.spotify-playlist-form-card label {
+    display: block;
+    margin: 13px 0 7px;
+    color: #78646f;
+    font-weight: 700;
+}
+
+.spotify-playlist-form-card input,
+.spotify-playlist-form-card textarea,
+.spotify-playlist-form-card select,
+.spotify-playlist-tools input,
+.spotify-playlist-tools select {
+    width: 100%;
+    padding: 13px 14px;
+    border: none;
+    border-radius: 15px;
+    background: #fff5f9;
+    color: #6f5f68;
+    font-family: inherit;
+    outline: none;
+}
+
+.spotify-playlist-form-card textarea {
+    min-height: 105px;
+    resize: vertical;
+}
+
+.spotify-playlist-form-card input:focus,
+.spotify-playlist-form-card textarea:focus,
+.spotify-playlist-form-card select:focus,
+.spotify-playlist-tools input:focus,
+.spotify-playlist-tools select:focus {
+    box-shadow: 0 0 0 3px rgba(231, 164, 196, 0.35);
+}
+
+.spotify-link-help {
+    margin: -7px 0 16px;
+    color: #a18d98;
+    font-size: 12px;
+    line-height: 1.5;
+}
+
+.primary-button,
+.spotify-open-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px 19px;
+    border: none;
+    border-radius: 999px;
+    background: #d984ad;
+    color: white;
+    font-family: inherit;
+    font-weight: 700;
+    text-decoration: none;
+    cursor: pointer;
+    transition: 0.22s;
+}
+
+.spotify-playlist-form-card .primary-button {
+    width: 100%;
+}
+
+.primary-button:hover,
+.spotify-open-button:hover {
+    transform: translateY(-2px);
+    background: #c7729d;
+}
+
+.small-soft-button {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 999px;
+    background: #ffe7f1;
+    color: #b76c91;
+    font-family: inherit;
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.small-soft-button:hover {
+    transform: translateY(-1px);
+    background: #f7cee0;
+}
+
+.danger-soft-button {
+    background: #ffe8ec;
+    color: #be6575;
+}
+
+.form-message {
+    min-height: 22px;
+    margin: 12px 0 0;
+    color: #b96f95;
+    font-size: 13px;
+    text-align: center;
+}
+
+/* Collection */
+
+.spotify-collection-heading {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 18px;
+    margin-bottom: 21px;
+}
+
+.spotify-collection-heading p {
+    margin-top: 5px;
+    color: #927e89;
+    font-size: 14px;
+}
+
+.spotify-playlist-tools {
+    display: grid;
+    grid-template-columns: 1fr 185px;
+    gap: 13px;
+    margin-bottom: 24px;
+}
+
+.spotify-playlist-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 20px;
+}
+
+/* Playlist cards */
+
+.spotify-playlist-card {
+    overflow: hidden;
+    position: relative;
+    border-radius: 25px;
+    background: #fffafd;
+    box-shadow: 0 9px 26px rgba(93, 59, 76, 0.1);
+    cursor: pointer;
+    transition: 0.23s;
+}
+
+.spotify-playlist-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 36px rgba(93, 59, 76, 0.15);
+}
+
+.spotify-card-cover-wrapper {
+    position: relative;
+    aspect-ratio: 1 / 1;
+    overflow: hidden;
+    background: linear-gradient(145deg, #ffe4ef, #e9d6f2);
+}
+
+.spotify-card-cover {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+}
+
+.spotify-default-cover {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background:
+        radial-gradient(
+            circle at top left,
+            rgba(255, 255, 255, 0.85),
+            transparent 35%
+        ),
+        linear-gradient(145deg, #f7bfd8, #dacaf0);
+    font-size: 65px;
+}
+
+.spotify-card-favorite {
+    position: absolute;
+    top: 11px;
+    right: 11px;
+    width: 39px;
+    height: 39px;
+    border: none;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.92);
+    color: #be7298;
+    font-size: 21px;
+    cursor: pointer;
+}
+
+.spotify-card-favorite.is-favorite {
+    background: #d984ad;
+    color: white;
+}
+
+.spotify-card-content {
+    padding: 17px;
+}
+
+.spotify-card-content h4 {
+    overflow: hidden;
+    margin-bottom: 7px;
+    color: #a95f85;
+    font-size: 18px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.spotify-card-description {
+    display: -webkit-box;
+    overflow: hidden;
+    margin-bottom: 13px;
+    color: #806d78;
+    font-size: 13px;
+    line-height: 1.55;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
+
+.spotify-card-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.spotify-card-mood {
+    padding: 5px 10px;
+    border-radius: 999px;
+    background: #ffe7f1;
+    color: #b46b90;
+    font-size: 11px;
+    font-weight: 700;
+}
+
+.spotify-card-play {
+    color: #c07399;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+/* Empty state */
+
+.spotify-empty-state {
+    padding: 55px 20px;
+    border: 2px dashed #f0cadc;
+    border-radius: 25px;
+    background: #fff9fc;
+    text-align: center;
+}
+
+.spotify-empty-icon {
+    margin-bottom: 10px;
+    font-size: 48px;
+}
+
+.spotify-empty-state h4 {
+    color: #b96f95;
+}
+
+.spotify-empty-state p {
+    margin-top: 7px;
+    color: #927e89;
+}
+
+/* Modal */
+
+.spotify-modal {
+    position: fixed;
+    inset: 0;
+    z-index: 3000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 22px;
+}
+
+.spotify-modal-backdrop {
+    position: absolute;
+    inset: 0;
+    background: rgba(50, 35, 43, 0.6);
+    backdrop-filter: blur(8px);
+}
+
+.spotify-modal-content {
+    position: relative;
+    z-index: 2;
+    width: min(850px, 100%);
+    max-height: 92vh;
+    overflow-y: auto;
+    padding: 30px;
+    border-radius: 31px;
+    background: #fffafd;
+    box-shadow: 0 26px 80px rgba(43, 28, 36, 0.3);
+}
+
+.spotify-modal-close {
+    position: absolute;
+    top: 13px;
+    right: 13px;
+    z-index: 3;
+    width: 42px;
+    height: 42px;
+    border: none;
+    border-radius: 50%;
+    background: white;
+    color: #b76c91;
+    font-size: 28px;
+    cursor: pointer;
+    box-shadow: 0 5px 17px rgba(65, 42, 54, 0.13);
+}
+
+.spotify-modal-information {
+    display: grid;
+    grid-template-columns: 220px 1fr;
+    gap: 27px;
+    align-items: center;
+    margin-bottom: 25px;
+    padding: 20px;
+    border-radius: 26px;
+    background: linear-gradient(145deg, #fff0f7, #f5eaf6);
+}
+
+.spotify-modal-cover {
+    width: 220px;
+    height: 220px;
+    display: block;
+    border-radius: 22px;
+    object-fit: cover;
+    background: #f3c9dc;
+    box-shadow: 0 10px 26px rgba(81, 51, 67, 0.14);
+}
+
+.spotify-modal-mood {
+    display: inline-block;
+    margin-bottom: 11px;
+    padding: 6px 12px;
+    border-radius: 999px;
+    background: white;
+    color: #b36b8e;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.spotify-modal-text h3 {
+    margin-bottom: 10px;
+    color: #a95f85;
+    font-size: 30px;
+}
+
+.spotify-modal-text p {
+    color: #76656f;
+    line-height: 1.65;
+}
+
+.spotify-modal-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 9px;
+    margin-top: 18px;
+}
+
+.spotify-embed-container iframe {
+    width: 100%;
+    min-height: 352px;
+    display: block;
+    border: none;
+    border-radius: 17px;
+}
+
+.spotify-player-note {
+    margin: 10px 0 0;
+    color: #9b8792;
+    font-size: 12px;
+    text-align: center;
+}
+
+.hidden {
+    display: none !important;
+}
+
+body.modal-open {
+    overflow: hidden;
+}
+
+/* Responsive */
+
+@media (max-width: 1050px) {
+    .spotify-playlist-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 850px) {
+    .spotify-playlists-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .spotify-playlist-form-card {
+        position: static;
+    }
+}
+
+@media (max-width: 650px) {
+    .spotify-playlists-header {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .spotify-playlist-counter {
+        width: 100%;
+    }
+
+    .spotify-playlist-tools {
+        grid-template-columns: 1fr;
+    }
+
+    .spotify-playlist-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .spotify-modal {
+        padding: 10px;
+    }
+
+    .spotify-modal-content {
+        padding: 18px;
+        border-radius: 24px;
+    }
+
+    .spotify-modal-information {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .spotify-modal-cover {
+        width: min(270px, 100%);
+        height: auto;
+        aspect-ratio: 1 / 1;
+        margin: 0 auto;
+    }
+
+    .spotify-modal-actions {
+        justify-content: center;
+    }
+
+    .spotify-embed-container iframe {
+        min-height: 352px;
+    }
+}
+
+/* =========================================
+   REMINDERS PAGE — VIEW ONLY
+========================================= */
+
+.daily-reminders-page {
+    display: grid;
+    gap: 24px;
+}
+
+/* =========================================
+   MAIN DAILY REMINDER
+========================================= */
+
+.main-reminder-card {
+    position: relative;
+
+    overflow: hidden;
+
+    padding: 55px 40px;
+
+    border-radius: 34px;
+
+    background:
+        radial-gradient(
+            circle at top right,
+            rgba(255, 255, 255, 0.95),
+            transparent 34%
+        ),
+        linear-gradient(
+            135deg,
+            #ffe7f1,
+            #f7dbe9,
+            #fff5f9
+        );
+
+    box-shadow:
+        0 18px 45px rgba(224, 145, 183, 0.18);
+
+    text-align: center;
+}
+
+.reminder-decoration {
+    position: absolute;
+
+    right: 24px;
+    bottom: -8px;
+
+    font-size: 110px;
+
+    opacity: 0.1;
+
+    pointer-events: none;
+}
+
+.reminder-label {
+    display: inline-block;
+
+    margin-bottom: 22px;
+
+    padding: 8px 15px;
+
+    border-radius: 999px;
+
+    background: rgba(255, 255, 255, 0.8);
+
+    color: #b96f94;
+
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 1px;
+
+    text-transform: uppercase;
+}
+
+.main-reminder-text {
+    position: relative;
+    z-index: 1;
+
+    max-width: 760px;
+
+    margin: 0 auto;
+
+    color: #965f7a;
+
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 1.6;
+}
+
+.reminder-small-text {
+    position: relative;
+    z-index: 1;
+
+    margin-top: 24px;
+
+    color: #a98697;
+
+    font-size: 14px;
+}
+
+/* =========================================
+   MINI REMINDERS
+========================================= */
+
+.reminder-mini-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, minmax(0, 1fr));
+
+    gap: 18px;
+}
+
+.reminder-mini-card {
+    min-height: 165px;
+
+    padding: 26px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    text-align: center;
+
+    border-radius: 27px;
+
+    background: rgba(
+        255,
+        255,
+        255,
+        0.92
+    );
+
+    box-shadow:
+        0 10px 30px
+        rgba(236, 164, 196, 0.14);
+
+    transition: 0.3s;
+}
+
+.reminder-mini-card:hover {
+    transform: translateY(-4px);
+
+    box-shadow:
+        0 15px 35px
+        rgba(236, 164, 196, 0.2);
+}
+
+.reminder-mini-card span {
+    display: block;
+
+    margin-bottom: 13px;
+
+    font-size: 33px;
+}
+
+.reminder-mini-card p {
+    color: #806e79;
+
+    font-size: 15px;
+    font-weight: 600;
+
+    line-height: 1.7;
+}
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 750px) {
+
+    .main-reminder-card {
+        padding: 42px 25px;
+    }
+
+    .main-reminder-text {
+        font-size: 24px;
+    }
+
+    .reminder-mini-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+
+    .main-reminder-text {
+        font-size: 21px;
+    }
+
+    .reminder-decoration {
+        font-size: 85px;
+    }
+}
+
+/* =========================================
+   COZY DAY IDEAS — VIEW ONLY
+========================================= */
+
+/* CATEGORY BUTTONS */
+
+.cozy-categories {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 30px;
+}
+
+.cozy-category-button {
+    padding: 11px 18px;
+
+    border: none;
+    border-radius: 999px;
+
+    background: rgba(255, 255, 255, 0.92);
+    color: #806e79;
+
+    font-family: "Quicksand", sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 7px 20px
+        rgba(232, 166, 197, 0.12);
+
+    transition:
+        transform 0.25s,
+        background 0.25s,
+        color 0.25s,
+        box-shadow 0.25s;
+}
+
+.cozy-category-button:hover {
+    transform: translateY(-2px);
+
+    background: #fff0f6;
+
+    box-shadow:
+        0 10px 25px
+        rgba(232, 166, 197, 0.18);
+}
+
+.cozy-category-button.active-cozy-category {
+    background: linear-gradient(
+        135deg,
+        #f4b6d3,
+        #e99fc3
+    );
+
+    color: white;
+
+    box-shadow:
+        0 8px 22px
+        rgba(220, 130, 173, 0.22);
+}
+
+
+/* =========================================
+   IDEAS GRID
+========================================= */
+
+.cozy-ideas-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, minmax(0, 1fr));
+
+    gap: 20px;
+}
+
+
+/* =========================================
+   IDEA CARD
+========================================= */
+
+.cozy-idea-card {
+    position: relative;
+
+    min-height: 245px;
+
+    display: flex;
+    flex-direction: column;
+
+    padding: 27px;
+
+    overflow: hidden;
+
+    border:
+        1px solid
+        rgba(242, 192, 215, 0.5);
+
+    border-radius: 28px;
+
+    background:
+        radial-gradient(
+            circle at top right,
+            rgba(255, 255, 255, 0.95),
+            transparent 38%
+        ),
+        linear-gradient(
+            145deg,
+            #fffafd,
+            #fff1f7
+        );
+
+    box-shadow:
+        0 10px 30px
+        rgba(222, 150, 184, 0.13);
+
+    transition:
+        transform 0.3s,
+        box-shadow 0.3s;
+}
+
+.cozy-idea-card:hover {
+    transform: translateY(-5px);
+
+    box-shadow:
+        0 17px 38px
+        rgba(222, 150, 184, 0.2);
+}
+
+
+/* LITTLE DECORATIVE CIRCLE */
+
+.cozy-idea-card::after {
+    content: "";
+
+    position: absolute;
+
+    width: 115px;
+    height: 115px;
+
+    right: -35px;
+    bottom: -45px;
+
+    border-radius: 50%;
+
+    background:
+        rgba(244, 182, 211, 0.13);
+
+    pointer-events: none;
+}
+
+
+/* =========================================
+   ICON
+========================================= */
+
+.cozy-idea-icon {
+    width: 58px;
+    height: 58px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin-bottom: 18px;
+
+    border-radius: 19px;
+
+    background: linear-gradient(
+        135deg,
+        #ffe5f0,
+        #f5d8e7
+    );
+
+    font-size: 29px;
+
+    box-shadow:
+        0 7px 18px
+        rgba(220, 145, 181, 0.12);
+}
+
+
+/* =========================================
+   CATEGORY LABEL
+========================================= */
+
+.cozy-idea-category {
+    width: fit-content;
+
+    margin-bottom: 10px;
+
+    padding: 6px 11px;
+
+    border-radius: 999px;
+
+    background: #fce5ef;
+    color: #b36b8e;
+
+    font-size: 11px;
+    font-weight: 700;
+}
+
+
+/* =========================================
+   CARD TEXT
+========================================= */
+
+.cozy-idea-card h3 {
+    position: relative;
+    z-index: 1;
+
+    margin-bottom: 10px;
+
+    color: #b76c91;
+
+    font-size: 19px;
+    line-height: 1.35;
+}
+
+.cozy-idea-card p {
+    position: relative;
+    z-index: 1;
+
+    margin: 0;
+
+    color: #806e79;
+
+    font-size: 14px;
+    line-height: 1.75;
+}
+
+
+/* =========================================
+   DIFFERENT SOFT BACKGROUNDS
+========================================= */
+
+.cozy-idea-card:nth-child(3n + 1) {
+    background: linear-gradient(
+        145deg,
+        #fffafd,
+        #ffeef6
+    );
+}
+
+.cozy-idea-card:nth-child(3n + 2) {
+    background: linear-gradient(
+        145deg,
+        #fffdfb,
+        #fff3ee
+    );
+}
+
+.cozy-idea-card:nth-child(3n + 3) {
+    background: linear-gradient(
+        145deg,
+        #fffafd,
+        #f7f0fb
+    );
+}
+
+
+/* =========================================
+   FILTERING
+========================================= */
+
+.cozy-idea-card.cozy-hidden {
+    display: none;
+}
+
+
+/* =========================================
+   APPEAR ANIMATION
+========================================= */
+
+.cozy-idea-card {
+    animation:
+        cozyCardAppear
+        0.4s ease;
+}
+
+@keyframes cozyCardAppear {
+
+    from {
+        opacity: 0;
+
+        transform:
+            translateY(12px)
+            scale(0.98);
+    }
+
+    to {
+        opacity: 1;
+
+        transform:
+            translateY(0)
+            scale(1);
+    }
+}
+
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 1000px) {
+
+    .cozy-ideas-grid {
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+    }
+}
+
+
+@media (max-width: 650px) {
+
+    .cozy-categories {
+        gap: 8px;
+    }
+
+    .cozy-category-button {
+        padding: 10px 14px;
+
+        font-size: 13px;
+    }
+
+    .cozy-ideas-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .cozy-idea-card {
+        min-height: auto;
+
+        padding: 24px;
+    }
+}
+
+/* =========================================
+   COZY DAY DETAIL VIEW
+========================================= */
+
+.cozy-detail-view {
+    margin-top: 30px;
+}
+
+/* =========================================
+   BACK BUTTON
+========================================= */
+
+.cozy-back-button {
+    border: none;
+
+    padding: 11px 18px;
+
+    border-radius: 999px;
+
+    background: #fff3f8;
+
+    color: #b66f92;
+
+    font-family: "Quicksand", sans-serif;
+
+    font-size: 14px;
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition: 0.25s;
+
+    box-shadow:
+        0 8px 22px
+        rgba(225, 151, 186, 0.14);
+}
+
+.cozy-back-button:hover {
+    transform: translateY(-2px);
+
+    background: #f9dbe9;
+}
+
+/* =========================================
+   HERO
+========================================= */
+
+.cozy-detail-hero {
+    position: relative;
+
+    overflow: hidden;
+
+    margin-top: 22px;
+
+    padding: 48px 38px;
+
+    border-radius: 34px;
+
+    text-align: center;
+
+    background:
+        radial-gradient(
+            circle at top right,
+            rgba(255, 255, 255, 0.95),
+            transparent 35%
+        ),
+        linear-gradient(
+            135deg,
+            #ffe5f0,
+            #f7dce9,
+            #fff7fa
+        );
+
+    box-shadow:
+        0 16px 42px
+        rgba(224, 145, 183, 0.18);
+}
+
+.cozy-detail-icon {
+    display: block;
+
+    margin-bottom: 12px;
+
+    font-size: 54px;
+}
+
+.cozy-detail-category {
+    display: inline-block;
+
+    margin-bottom: 12px;
+
+    padding: 7px 13px;
+
+    border-radius: 999px;
+
+    background: rgba(
+        255,
+        255,
+        255,
+        0.82
+    );
+
+    color: #b66f92;
+
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.cozy-detail-hero h2 {
+    color: #b66f92;
+
+    font-size: 34px;
+
+    margin-bottom: 12px;
+}
+
+#cozyDetailIntro {
+    max-width: 700px;
+
+    margin: 0 auto;
+
+    color: #8f7a86;
+
+    font-size: 17px;
+
+    line-height: 1.7;
+}
+
+/* =========================================
+   DETAIL SECTIONS
+========================================= */
+
+.cozy-detail-section {
+    margin-top: 24px;
+
+    padding: 28px;
+
+    border-radius: 28px;
+
+    background: rgba(
+        255,
+        255,
+        255,
+        0.92
+    );
+
+    box-shadow:
+        0 10px 30px
+        rgba(230, 160, 192, 0.14);
+}
+
+.cozy-detail-section h3 {
+    margin-bottom: 15px;
+
+    color: #b66f92;
+
+    font-size: 22px;
+}
+
+.cozy-detail-section > p:not(.small-heading) {
+    color: #806e79;
+
+    line-height: 1.8;
+}
+
+/* =========================================
+   TWO-COLUMN SECTIONS
+========================================= */
+
+.cozy-detail-two-columns {
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, minmax(0, 1fr));
+
+    gap: 20px;
+}
+
+/* =========================================
+   RECOMMENDATION LIST
+========================================= */
+
+.cozy-recommendation-list {
+    display: grid;
+
+    gap: 11px;
+}
+
+.cozy-recommendation-item {
+    padding: 14px 16px;
+
+    border-radius: 17px;
+
+    background: #fff6fa;
+
+    color: #806e79;
+
+    font-size: 14px;
+    font-weight: 600;
+
+    line-height: 1.55;
+}
+
+/* =========================================
+   LITTLE EXTRAS
+========================================= */
+
+.cozy-extra-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, minmax(0, 1fr));
+
+    gap: 13px;
+}
+
+.cozy-extra-item {
+    padding: 18px;
+
+    border-radius: 20px;
+
+    background:
+        linear-gradient(
+            145deg,
+            #fff7fb,
+            #fcebf3
+        );
+
+    color: #806e79;
+
+    text-align: center;
+
+    font-size: 14px;
+    font-weight: 600;
+
+    line-height: 1.6;
+}
+
+/* =========================================
+   PHOTO GALLERY
+========================================= */
+
+.cozy-detail-photo-description {
+    margin-bottom: 18px;
+}
+
+.cozy-detail-photo-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, minmax(0, 1fr));
+
+    gap: 16px;
+}
+
+.cozy-detail-photo-grid img {
+    width: 100%;
+    height: 290px;
+
+    display: block;
+
+    object-fit: cover;
+
+    border-radius: 22px;
+
+    box-shadow:
+        0 10px 26px
+        rgba(214, 145, 177, 0.16);
+}
+
+.cozy-detail-photo-grid img:nth-child(2) {
+    height: 350px;
+}
+
+/* =========================================
+   BOTTOM BUTTON
+========================================= */
+
+.cozy-bottom-back-button {
+    display: block;
+
+    margin: 28px auto 0;
+}
+
+/* =========================================
+   CLICKABLE IDEA CARDS
+========================================= */
+
+.cozy-idea-card[data-cozy-idea] {
+    cursor: pointer;
+}
+
+.cozy-idea-card[data-cozy-idea]:focus {
+    outline: 3px solid
+        rgba(233, 159, 195, 0.35);
+
+    outline-offset: 4px;
+}
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 800px) {
+
+    .cozy-detail-two-columns {
+        grid-template-columns: 1fr;
+    }
+
+    .cozy-extra-grid {
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+    }
+
+    .cozy-detail-photo-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .cozy-detail-photo-grid img,
+    .cozy-detail-photo-grid img:nth-child(2) {
+        height: 330px;
+    }
+}
+
+@media (max-width: 520px) {
+
+    .cozy-detail-hero {
+        padding: 38px 22px;
+    }
+
+    .cozy-detail-hero h2 {
+        font-size: 27px;
+    }
+
+    .cozy-detail-section {
+        padding: 22px;
+    }
+
+    .cozy-extra-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .cozy-detail-photo-grid img,
+    .cozy-detail-photo-grid img:nth-child(2) {
+        height: 270px;
+    }
+}
+
+/* =========================================
+   COZY PHOTO ERROR
+========================================= */
+
+.cozy-detail-photo-grid img.cozy-photo-error {
+    background: linear-gradient(
+        135deg,
+        #fff2f7,
+        #fbe5ef
+    );
+
+    border: 2px dashed #efbfd4;
+}
+
+/* =========================================
+   HEADER FIX
+   Keep logo + navigation on one line
+========================================= */
+
+header {
+    padding: 18px 24px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 25px;
+}
+
+/* Keep the whole logo together */
+
+.logo {
+    flex-shrink: 0;
+}
+
+.logo h1 {
+    font-size: 38px;
+    white-space: nowrap;
+    line-height: 1;
+}
+
+.logo p {
+    margin-top: 8px;
+    white-space: nowrap;
+}
+
+/* Keep navigation on ONE line */
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+
+    gap: 9px;
+
+    flex-wrap: nowrap;
+}
+
+/* Slightly smaller buttons so everything fits */
+
+.nav-btn {
+    padding: 11px 15px;
+
+    font-size: 14px;
+
+    white-space: nowrap;
+    flex-shrink: 0;
+}
+
+/* Keep Log Out beside the other buttons */
+
+#logoutBtn {
+    padding: 11px 17px;
+
+    white-space: nowrap;
+    flex-shrink: 0;
+}

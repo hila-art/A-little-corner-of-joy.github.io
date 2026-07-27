@@ -1,0 +1,2398 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>A Little Corner of Joy 🩷</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&family=Caveat:wght@700&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+<!-- ================= LOGIN ================= -->
+
+<section id="login-screen">
+
+    <div class="login-card">
+
+        <h1>A Little Corner of Joy 🩷</h1>
+
+        <p class="subtitle">
+            Welcome back.
+        </p>
+
+        <input
+            type="text"
+            id="username"
+            placeholder="Username">
+
+        <input
+            type="password"
+            id="password"
+            placeholder="Password">
+
+        <button id="loginBtn">
+
+            Enter My Cozy Corner ☁️
+
+        </button>
+
+    </div>
+
+</section>
+
+<!-- ================= APP ================= -->
+
+<section id="app" class="hidden">
+
+<header>
+
+<div class="logo">
+
+<h1>A Little Corner of Joy 🩷</h1>
+
+<p>where little moments become beautiful memories</p>
+
+</div>
+
+<nav>
+
+<button class="nav-btn active" data-page="home">
+🏡 Home
+</button>
+
+<button class="nav-btn" data-page="happy">
+🌸 Happy List
+</button>
+
+<button class="nav-btn" data-page="photos">
+    📷 Photos
+</button>
+
+<button class="nav-btn" data-page="inspiration" type="button">
+    🎀 Inspiration
+</button>
+
+<button class="nav-btn" data-page="playlists">
+    🎵 Playlists
+</button>
+
+<button class="nav-btn" data-page="reminders">
+💌 Reminders
+</button>
+
+<button class="nav-btn" data-page="cozy">
+☕ Cozy Day
+</button>
+
+<button id="logoutBtn">
+
+Log Out
+
+</button>
+
+</nav>
+
+</header>
+
+<main>
+
+<!-- HOME -->
+
+<section id="home" class="page active-page">
+
+<div class="welcome-card">
+
+<h2 id="greeting">
+
+Good afternoon 🌸
+
+</h2>
+
+<p>
+
+I'm so happy you're here.
+
+</p>
+
+</div>
+
+<div class="quote-card">
+
+<h3>
+
+Today's Quote
+
+</h3>
+
+<p id="dailyQuote">
+
+Loading today's quote...
+
+</p>
+
+</div>
+
+</section>
+
+<!-- HAPPY LIST -->
+
+<!-- ================= HAPPY LIST ================= -->
+
+<section id="happy" class="page">
+
+    <div class="page-heading">
+
+        <div>
+            <p class="small-heading">your personal notebook</p>
+
+            <h2>🌸 My Happy List</h2>
+
+            <p class="page-description">
+                Save little moments, memories and things that make you smile.
+            </p>
+        </div>
+
+        <div class="happy-counter">
+            <span id="happyCount">0</span>
+            happy things
+        </div>
+
+    </div>
+
+    <div class="happy-layout">
+
+        <!-- ADD NEW ITEM -->
+
+        <div class="happy-form-card">
+
+            <h3>Add something happy ✨</h3>
+
+            <label for="happyTitle">
+                What made you happy?
+            </label>
+
+            <input
+                type="text"
+                id="happyTitle"
+                maxlength="70"
+                placeholder="A warm drink, a kind message, a lovely song..."
+            >
+
+            <label for="happyDescription">
+                Add a little note
+            </label>
+
+            <textarea
+                id="happyDescription"
+                maxlength="250"
+                placeholder="Write about the moment..."
+            ></textarea>
+
+            <label for="happyCategory">
+                Choose a category
+            </label>
+
+            <select id="happyCategory">
+
+                <option value="Little Joy">🌸 Little Joy</option>
+
+                <option value="Memory">📷 Memory</option>
+
+                <option value="Person">💌 Person</option>
+
+                <option value="Music">🎵 Music</option>
+
+                <option value="Cozy Moment">☕ Cozy Moment</option>
+
+                <option value="Achievement">✨ Achievement</option>
+
+            </select>
+
+            <button id="addHappyBtn" class="primary-button">
+                Add to My Happy List
+            </button>
+
+            <p id="happyFormMessage" class="form-message"></p>
+
+        </div>
+
+        <!-- SAVED ITEMS -->
+
+        <div class="happy-list-card">
+
+            <div class="happy-list-top">
+
+                <div>
+                    <p class="small-heading">
+                        saved moments
+                    </p>
+
+                    <h3>Things That Make Me Happy</h3>
+                </div>
+
+                <button
+                    id="clearHappyBtn"
+                    class="text-button"
+                    type="button"
+                >
+                    Clear all
+                </button>
+
+            </div>
+
+            <div class="happy-tools">
+
+                <div class="search-box">
+
+                    <span>🔎</span>
+
+                    <input
+                        type="search"
+                        id="happySearch"
+                        placeholder="Search your happy list..."
+                    >
+
+                </div>
+
+                <select id="happyFilter">
+
+                    <option value="All">
+                        All categories
+                    </option>
+
+                    <option value="Little Joy">
+                        Little Joys
+                    </option>
+
+                    <option value="Memory">
+                        Memories
+                    </option>
+
+                    <option value="Person">
+                        People
+                    </option>
+
+                    <option value="Music">
+                        Music
+                    </option>
+
+                    <option value="Cozy Moment">
+                        Cozy Moments
+                    </option>
+
+                    <option value="Achievement">
+                        Achievements
+                    </option>
+
+                </select>
+
+            </div>
+
+            <div id="happyItems" class="happy-items">
+
+                <!-- JavaScript will place the saved items here -->
+
+            </div>
+
+            <div id="emptyHappyState" class="empty-state">
+
+                <div class="empty-state-icon">🌷</div>
+
+                <h4>Your happy list is waiting</h4>
+
+                <p>
+                    Add your first happy moment using the form.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- PHOTOS -->
+
+<!-- ================= PHOTOS ================= -->
+
+<section id="photos" class="page">
+
+    <div class="page-heading">
+
+        <div>
+
+            <p class="small-heading">
+                your cozy memories
+            </p>
+
+            <h2>📷 My Photos</h2>
+
+            <p class="page-description">
+                Save your favorite pictures and the little stories behind them.
+            </p>
+
+        </div>
+
+        <div class="photo-counter">
+
+            <span id="photoCount">0</span>
+
+            saved photos
+
+        </div>
+
+    </div>
+
+    <div class="photos-layout">
+
+        <!-- PHOTO UPLOAD CARD -->
+
+        <div class="photo-upload-card">
+
+            <h3>Add a New Memory 🌷</h3>
+
+            <label
+                for="photoUpload"
+                class="photo-upload-area"
+                id="photoUploadArea"
+            >
+
+                <input
+                    type="file"
+                    id="photoUpload"
+                    accept="image/*"
+                    hidden
+                >
+
+                <div class="photo-upload-icon">
+                    📸
+                </div>
+
+                <p class="photo-upload-title">
+                    Choose a photo
+                </p>
+
+                <p class="photo-upload-text">
+                    Click here to upload a picture
+                </p>
+
+            </label>
+
+            <div
+                id="photoPreviewBox"
+                class="photo-preview-box hidden"
+            >
+
+                <img
+                    id="photoPreview"
+                    src=""
+                    alt="Selected photo preview"
+                >
+
+                <button
+                    id="removePhotoPreviewBtn"
+                    class="remove-preview-button"
+                    type="button"
+                >
+                    Remove photo
+                </button>
+
+            </div>
+
+            <label for="photoCaption">
+                Add a caption
+            </label>
+
+            <input
+                type="text"
+                id="photoCaption"
+                maxlength="90"
+                placeholder="A lovely afternoon, my favorite café..."
+            >
+
+            <label for="photoStory">
+                Write a little memory
+            </label>
+
+            <textarea
+                id="photoStory"
+                maxlength="350"
+                placeholder="What made this moment special?"
+            ></textarea>
+
+            <button
+                id="savePhotoBtn"
+                class="primary-button"
+                type="button"
+            >
+                Save This Memory
+            </button>
+
+            <p
+                id="photoFormMessage"
+                class="form-message"
+            ></p>
+
+        </div>
+
+        <!-- PHOTO GALLERY -->
+
+        <div class="photo-gallery-card">
+
+            <div class="photo-gallery-top">
+
+                <div>
+
+                    <p class="small-heading">
+                        your collection
+                    </p>
+
+                    <h3>Memory Gallery</h3>
+
+                </div>
+
+                <button
+                    id="clearPhotosBtn"
+                    class="text-button"
+                    type="button"
+                >
+                    Clear all
+                </button>
+
+            </div>
+
+            <div class="photo-gallery-tools">
+
+                <div class="search-box">
+
+                    <span>🔎</span>
+
+                    <input
+                        type="search"
+                        id="photoSearch"
+                        placeholder="Search captions and memories..."
+                    >
+
+                </div>
+
+                <select id="photoFilter">
+
+                    <option value="all">
+                        All photos
+                    </option>
+
+                    <option value="favorites">
+                        Favorites
+                    </option>
+
+                </select>
+
+            </div>
+
+            <div
+                id="photoGallery"
+                class="photo-gallery"
+            >
+
+                <!-- JavaScript adds photos here -->
+
+            </div>
+
+            <div
+                id="emptyPhotoState"
+                class="empty-state"
+            >
+
+                <div class="empty-state-icon">
+                    📷
+                </div>
+
+                <h4>Your gallery is waiting</h4>
+
+                <p>
+                    Upload your first cozy memory.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ================= PHOTO MODAL ================= -->
+
+<div
+    id="photoModal"
+    class="photo-modal hidden"
+    role="dialog"
+    aria-modal="true"
+    aria-label="Photo viewer"
+>
+
+    <div class="photo-modal-backdrop"></div>
+
+    <div class="photo-modal-content">
+
+        <button
+            id="closePhotoModalBtn"
+            class="photo-modal-close"
+            type="button"
+            aria-label="Close photo"
+        >
+            ×
+        </button>
+
+        <img
+            id="modalPhoto"
+            src=""
+            alt="Saved memory"
+        >
+
+        <div class="photo-modal-details">
+
+            <h3 id="modalPhotoCaption"></h3>
+
+            <p id="modalPhotoStory"></p>
+
+            <div class="photo-modal-buttons">
+
+                <button
+                    id="modalFavoriteBtn"
+                    class="secondary-button"
+                    type="button"
+                >
+                    ♡ Favorite
+                </button>
+
+                <a
+                    id="modalDownloadBtn"
+                    class="secondary-button"
+                    href="#"
+                    download="cozy-memory"
+                >
+                    Download
+                </a>
+
+                <button
+                    id="modalDeleteBtn"
+                    class="danger-button"
+                    type="button"
+                >
+                    Delete
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<!-- ================= INSPIRATION BOARD ================= -->
+
+<!-- ================= INSPIRATION PAGE ================= -->
+
+<section id="inspiration" class="page">
+
+    <div class="page-heading">
+
+        <div>
+            <p class="small-heading">
+                little things that inspire me
+            </p>
+
+            <h2>🎀 Inspiration</h2>
+
+            <p class="page-description">
+                A soft little collection of beautiful moments,
+                cozy places and lovely ideas.
+            </p>
+        </div>
+
+    </div>
+
+    <!-- CATEGORY BUTTONS -->
+
+    <div class="inspiration-categories">
+
+        <button
+            class="inspiration-category-button active-inspiration-category"
+            type="button"
+            data-gallery-category="All"
+        >
+            ✨ All
+        </button>
+
+        <button
+            class="inspiration-category-button"
+            type="button"
+            data-gallery-category="Cozy"
+        >
+            ☕ Cozy
+        </button>
+
+        <button
+            class="inspiration-category-button"
+            type="button"
+            data-gallery-category="Fashion"
+        >
+            🎀 Fashion
+        </button>
+
+        <button
+            class="inspiration-category-button"
+            type="button"
+            data-gallery-category="Rooms"
+        >
+            🏡 Rooms
+        </button>
+
+        <button
+            class="inspiration-category-button"
+            type="button"
+            data-gallery-category="Food"
+        >
+            🍓 Food
+        </button>
+
+        <button
+            class="inspiration-category-button"
+            type="button"
+            data-gallery-category="Books"
+        >
+            📚 Books
+        </button>
+
+        <button
+            class="inspiration-category-button"
+            type="button"
+            data-gallery-category="Places"
+        >
+            🌷 Places
+        </button>
+
+    </div>
+
+    <!-- PINTEREST STYLE GALLERY -->
+
+    <div class="inspiration-gallery">
+
+        <article
+            class="inspiration-photo-card"
+            data-category="Cozy"
+        >
+            <img
+                src="images/cozy-window.jpeg"
+                alt="Cozy window with warm light"
+            >
+
+            <div class="inspiration-photo-text">
+                <span>☕ Cozy</span>
+                <h3>Rainy Window</h3>
+            </div>
+        </article>
+
+        <article
+            class="inspiration-photo-card tall"
+            data-category="Fashion"
+        >
+            <img
+                src="images/pink-outfit.jpeg"
+                alt="Soft pink outfit inspiration"
+            >
+
+            <div class="inspiration-photo-text">
+                <span>🎀 Fashion</span>
+                <h3>Soft Pink Afternoon</h3>
+            </div>
+        </article>
+
+        <article
+            class="inspiration-photo-card"
+            data-category="Rooms"
+        >
+            <img
+                src="images/cozy-bedroom.jpeg"
+                alt="Cozy bedroom inspiration"
+            >
+
+            <div class="inspiration-photo-text">
+                <span>🏡 Rooms</span>
+                <h3>Dreamy Bedroom</h3>
+            </div>
+        </article>
+
+        <article
+            class="inspiration-photo-card tall"
+            data-category="Books"
+        >
+            <img
+                src="images/book-corner.jpeg"
+                alt="Books and a cozy reading corner"
+            >
+
+            <div class="inspiration-photo-text">
+                <span>📚 Books</span>
+                <h3>Little Reading Corner</h3>
+            </div>
+        </article>
+
+        <article
+            class="inspiration-photo-card"
+            data-category="Food"
+        >
+            <img
+                src="images/strawberry-cake.jpeg"
+                alt="Strawberry cake"
+            >
+
+            <div class="inspiration-photo-text">
+                <span>🍓 Food</span>
+                <h3>Strawberry Café</h3>
+            </div>
+        </article>
+
+        <article
+            class="inspiration-photo-card tall"
+            data-category="Places"
+        >
+            <img
+                src="images/flower-street.jpeg"
+                alt="Pretty street with flowers"
+            >
+
+            <div class="inspiration-photo-text">
+                <span>🌷 Places</span>
+                <h3>Sunny Little Street</h3>
+            </div>
+        </article>
+
+        <article
+            class="inspiration-photo-card"
+            data-category="Cozy"
+        >
+            <img
+                src="images/coffee-book.jpeg"
+                alt="Coffee next to a book"
+            >
+
+            <div class="inspiration-photo-text">
+                <span>☕ Cozy</span>
+                <h3>Slow Morning</h3>
+            </div>
+        </article>
+
+        <article
+            class="inspiration-photo-card"
+            data-category="Fashion"
+        >
+            <img
+                src="images/cardigan-outfit.jpeg"
+                alt="Cardigan outfit inspiration"
+            >
+
+            <div class="inspiration-photo-text">
+                <span>🎀 Fashion</span>
+                <h3>Cozy Cardigan Day</h3>
+            </div>
+        </article>
+
+        <article
+            class="inspiration-photo-card tall"
+            data-category="Rooms"
+        >
+            <img
+                src="images/pink-desk.jpeg"
+                alt="Aesthetic desk setup"
+            >
+
+            <div class="inspiration-photo-text">
+                <span>🏡 Rooms</span>
+                <h3>Dream Desk</h3>
+            </div>
+        </article>
+
+        <article
+            class="inspiration-photo-card"
+            data-category="Places"
+        >
+            <img
+                src="images/beach-dancing.jpeg"
+                alt="Having fun at the beach"
+            >
+
+            <div class="inspiration-photo-text">
+                <span>🌷 Places</span>
+                <h3>Beach Dancing</h3>
+            </div>
+        </article>
+
+        <article
+            class="inspiration-photo-card"
+            data-category="Cozy"
+        >
+            <img
+                src="images/chill-day.jpeg"
+                alt="Chill day with a blanket and a book"
+            >
+
+            <div class="inspiration-photo-text">
+                <span>☕ Cozy</span>
+                <h3>Chill Day</h3>
+            </div>
+        </article>
+
+        <article
+            class="inspiration-photo-card"
+            data-category="Cozy"
+        >
+            <img
+                src="images/clay-lesson.jpeg"
+                alt="Clay lesson with a cozy atmosphere"
+            >
+
+            <div class="inspiration-photo-text">
+                <span>☕ Cozy</span>
+                <h3>Clay Lesson</h3>
+            </div>
+        </article>
+
+        <article
+            class="inspiration-photo-card"
+            data-category="Food"
+        >
+            <img
+                src="images/cocktails.jpeg"
+                alt="Colorful cocktails"
+            >
+
+            <div class="inspiration-photo-text">
+                <span>🍓 Food</span>
+                <h3>Colorful Cocktails</h3>
+            </div>
+        </article>
+
+        <article
+            class="inspiration-photo-card"
+            data-category="Cozy"
+        >
+            <img
+                src="images/coffee-pastries.jpeg"
+                alt="Coffee and pastries"
+            >
+
+            <div class="inspiration-photo-text">
+                <span>☕ Cozy</span>
+                <h3>Coffee & Pastries</h3>
+            </div>
+        </article>
+
+        <article
+            class="inspiration-photo-card"
+            data-category="Cozy"
+        >
+            <img
+                src="images/coffee-photos.jpeg"
+                alt="Coffee and photos on the side"
+            >
+
+            <div class="inspiration-photo-text">
+                <span>☕ Cozy</span>
+                <h3>Coffee & Photos</h3>
+            </div>
+        </article>
+
+        <article
+            class="inspiration-photo-card"
+            data-category="Places"
+        >
+            <img
+                src="images/dolphin.jpeg"
+                alt="Dolphin at the beach"
+            >
+
+            <div class="inspiration-photo-text">
+                <span>🌷 Places</span>
+                <h3>Dolphin at the Beach</h3>
+            </div>
+        </article>
+
+        <article
+            class="inspiration-photo-card"
+            data-category="Places"
+        >
+            <img
+                src="images/europe-window.jpeg"
+                alt="Amazing view from a European window"
+            >
+
+            <div class="inspiration-photo-text">
+                <span>🌷 Places</span>
+                <h3>European Window</h3>
+            </div>
+        </article>
+
+        <article
+            class="inspiration-photo-card"
+            data-category="Fashion"
+        >
+            <img
+                src="images/fit-check.jpeg"
+                alt="Amazing fit check"
+            >
+
+            <div class="inspiration-photo-text">
+                <span>🎀 Fashion</span>
+                <h3>Amazing Fit Check</h3>
+            </div>
+        </article>
+
+        <article
+            class="inspiration-photo-card"
+            data-category="Places"
+        >
+            <img
+                src="images/flower-sea.jpeg"
+                alt="Flower on the sea"
+            >
+
+            <div class="inspiration-photo-text">
+                <span>🌷 Places</span>
+                <h3>Flower on the Sea</h3>
+            </div>
+        </article>
+
+        <article
+            class="inspiration-photo-card"
+            data-category="Cozy"
+        >
+            <img
+                src="images/flower-store.jpeg"
+                alt="Flower store with cozy vibes"
+            >
+
+            <div class="inspiration-photo-text">
+                <span>☕ Cozy</span>
+                <h3>Flower Store</h3>
+            </div>
+        </article>
+
+        <article
+            class="inspiration-photo-card"
+            data-category="Cozy"
+        >
+            <img
+                src="images/flower-street.jpeg"
+                alt="Pretty street with flowers"
+            >
+
+            <div class="inspiration-photo-text">
+                <span>☕ Cozy</span>
+                <h3>Flower Street</h3>
+            </div>
+        </article>
+
+        <article
+            class="inspiration-photo-card"
+            data-category="Fashion"
+        >
+            <img
+                src="images/fluffy-outfit.jpeg"
+                alt="Fluffy outfit"
+            >
+
+            <div class="inspiration-photo-text">
+                <span>🎀 Fashion</span>
+                <h3>Fluffy Outfit</h3>
+            </div>
+        </article>
+
+        <article
+            class="inspiration-photo-card"
+            data-category="Cozy"
+        >
+            <img
+                src="images/friends-drinks.jpeg"
+                alt="Drinks at a restaurant"
+            >
+
+            <div class="inspiration-photo-text">
+                <span>☕ Cozy</span>
+                <h3>Friends & Drinks</h3>
+            </div>
+        </article>
+
+        <article
+            class="inspiration-photo-card"
+            data-category="Cozy"
+        >
+            <img
+                src="images/getting-ready-vintage.jpeg"
+                alt="Getting ready with a vintage vibe"
+            >
+
+            <div class="inspiration-photo-text">
+                <span>☕ Cozy</span>
+                <h3>Getting Ready</h3>
+            </div>
+        </article>
+
+        <article
+            class="inspiration-photo-card"
+            data-category="Cozy"
+        >
+            <img
+                src="images/golden-hour.jpeg"
+                alt="Golden hour with a cozy vibe"
+            >
+
+            <div class="inspiration-photo-text">
+                <span>☕ Cozy</span>
+                <h3>Golden Hour</h3>
+            </div>
+        </article>
+
+        <article
+            class="inspiration-photo-card"
+            data-category="Food"
+        >
+            <img
+                src="images/ice-cream-friends.jpeg"
+                alt="Friends enjoying ice cream"
+            >
+
+            <div class="inspiration-photo-text">
+                <span>🍰 Food</span>
+                <h3>Ice Cream Friends</h3>
+            </div>
+        </article>
+
+        <article
+            class="inspiration-photo-card"
+            data-category="Food"
+        >
+            <img
+                src="images/ice-cream.jpeg"
+                alt="Ice cream"
+            >
+
+            <div class="inspiration-photo-text">
+                <span>🍰 Food</span>
+                <h3>Ice Cream</h3>
+            </div>
+        </article>
+
+        <article
+            class="inspiration-photo-card"
+            data-category="Places"
+        >
+            <img
+                src="images/plane.jpeg"
+                alt="Plane flying over clouds"
+            >
+
+            <div class="inspiration-photo-text">
+                <span>🌷 Places</span>
+                <h3>Plane Ride</h3>
+            </div>
+        </article>
+
+        <article
+            class="inspiration-photo-card"
+            data-category="Cozy"
+        >
+            <img
+                src="images/reading.jpeg"
+                alt="Reading a book with a cozy vibe"
+            >
+
+            <div class="inspiration-photo-text">
+                <span>☕ Cozy</span>
+                <h3>Reading</h3>
+            </div>
+        </article>
+
+        <article
+            class="inspiration-photo-card"
+            data-category="Cozy"
+        >
+            <img
+                src="images/record-store.jpeg"
+                alt="Record store with cozy vibes"
+            >
+
+            <div class="inspiration-photo-text">
+                <span>☕ Cozy</span>
+                <h3>Record Store</h3>
+            </div>
+        </article>
+
+        <article
+            class="inspiration-photo-card"
+            data-category="Food"
+        >
+            <img
+                src="images/rhode-drink.jpeg"
+                alt="Beautiful drink with a Rhode lip balm on the side"
+            >
+
+            <div class="inspiration-photo-text">
+                <span>🍰 Food</span>
+                <h3>Rhode Drink</h3>
+            </div>
+        </article>
+
+        <article
+            class="inspiration-photo-card"
+            data-category=" Places"
+        >
+            <img
+                src="images/sand-sun.jpeg"
+                alt="Sun on the sand at the beach"
+            >
+
+            <div class="inspiration-photo-text">
+                <span>🌷 Places</span>
+                <h3>Sand & Sun</h3>
+            </div>
+        </article>
+
+        <article
+            class="inspiration-photo-card"
+            data-category="Places"
+        >
+            <img
+                src="images/sand.jpeg"
+                alt="Ocean things on the sand"
+            >
+
+            <div class="inspiration-photo-text">
+                <span>🌷 Places</span>
+                <h3>Ocean Things</h3>
+            </div>
+        </article>
+
+        <article
+            class="inspiration-photo-card"
+            data-category="Places"
+        >
+            <img
+                src="images/sea-camera.jpeg"
+                alt="Taking pictures of the sea with a camera"
+            >
+
+            <div class="inspiration-photo-text">
+                <span>🌷 Places</span>
+                <h3>Sea Camera</h3>
+            </div>
+        </article>
+
+        <article
+            class="inspiration-photo-card"
+            data-category="Fashion"
+        >
+            <img
+                src="images/sidewalk-outfit.jpeg"
+                alt="Fit check on the sidewalk"
+            >
+
+            <div class="inspiration-photo-text">
+                <span>🎀 Fashion</span>
+                <h3>Sidewalk Outfit</h3>
+            </div>
+        </article>
+
+        <article
+            class="inspiration-photo-card"
+            data-category="Food"
+        >
+            <img
+                src="images/smoothies.jpeg"
+                alt="Delicious smoothies"
+            >
+
+            <div class="inspiration-photo-text">
+                <span>🍰 Food</span>
+                <h3>Smoothies</h3>
+            </div>
+        </article>
+
+        <article
+            class="inspiration-photo-card"
+            data-category="Places"
+        >
+            <img
+                src="images/summer-vibes.jpeg"
+                alt="Summer vibes"
+            >
+
+            <div class="inspiration-photo-text">
+                <span>🌷 Places</span>
+                <h3>Summer Vibes</h3>
+            </div>
+        </article>
+
+        <article
+            class="inspiration-photo-card"
+            data-category="Cozy"
+        >
+            <img
+                src="images/tulips.jpeg"
+                alt="Beautiful tulips"
+            >
+
+            <div class="inspiration-photo-text">
+                <span>☕ Cozy</span>
+                <h3>Tulips</h3>
+            </div>
+        </article>
+
+        <article
+            class="inspiration-photo-card"
+            data-category="Food"
+        >
+            <img
+                src="images/wine-restaurant.jpeg"
+                alt="Wine at a restaurant"
+            >
+
+            <div class="inspiration-photo-text">
+                <span>🍰 Food</span>
+                <h3>Wine & Dine</h3>
+            </div>
+        </article>
+
+    </div>
+
+</section>
+
+<!-- PLAYLISTS -->
+
+<!-- ================= PLAYLISTS ================= -->
+
+<!-- =========================================
+     SPOTIFY PLAYLISTS PAGE
+========================================= -->
+
+<section id="playlists" class="page">
+
+    <div class="spotify-playlists-page">
+
+        <!-- PAGE HEADER -->
+
+        <div class="spotify-playlists-header">
+
+            <div>
+                <p class="spotify-page-label">
+                    🎧 Your cozy music corner
+                </p>
+
+                <h2>My Playlists</h2>
+
+                <p class="spotify-page-description">
+                    Save your favorite Spotify playlists and listen
+                    to them right here.
+                </p>
+            </div>
+
+            <div class="spotify-playlist-counter">
+                <span id="spotifyPlaylistCount">0</span>
+                <p>playlists</p>
+            </div>
+
+        </div>
+
+        <!-- MOOD FILTERS -->
+
+        <div class="spotify-mood-filters">
+
+            <button
+                class="spotify-mood-button active-spotify-mood"
+                type="button"
+                data-spotify-mood="All">
+                All
+            </button>
+
+            <button
+                class="spotify-mood-button"
+                type="button"
+                data-spotify-mood="Cozy">
+                ☕ Cozy
+            </button>
+
+            <button
+                class="spotify-mood-button"
+                type="button"
+                data-spotify-mood="Calm">
+                ☁️ Calm
+            </button>
+
+            <button
+                class="spotify-mood-button"
+                type="button"
+                data-spotify-mood="Happy">
+                🌸 Happy
+            </button>
+
+            <button
+                class="spotify-mood-button"
+                type="button"
+                data-spotify-mood="Dreamy">
+                🌙 Dreamy
+            </button>
+
+            <button
+                class="spotify-mood-button"
+                type="button"
+                data-spotify-mood="Study">
+                📚 Study
+            </button>
+
+            <button
+                class="spotify-mood-button"
+                type="button"
+                data-spotify-mood="Comfort">
+                💌 Comfort
+            </button>
+
+        </div>
+
+        <div class="spotify-playlists-layout">
+
+            <!-- CREATE PLAYLIST FORM -->
+
+            <aside class="spotify-playlist-form-card">
+
+                <h3>Add a Spotify Playlist</h3>
+
+                <p class="spotify-form-description">
+                    Paste a Spotify playlist link and it will become
+                    a player on your page.
+                </p>
+
+                <!-- COVER UPLOAD -->
+
+                <input
+                    id="spotifyCoverInput"
+                    type="file"
+                    accept="image/*"
+                    hidden
+                >
+
+                <label
+                    id="spotifyCoverUploadArea"
+                    class="spotify-cover-upload"
+                    for="spotifyCoverInput">
+
+                    <span class="spotify-upload-icon">🖼️</span>
+
+                    <span class="spotify-upload-title">
+                        Choose a cover
+                    </span>
+
+                    <span class="spotify-upload-subtitle">
+                        Optional
+                    </span>
+
+                </label>
+
+                <div
+                    id="spotifyCoverPreviewBox"
+                    class="spotify-cover-preview-box hidden">
+
+                    <img
+                        id="spotifyCoverPreview"
+                        src=""
+                        alt="Playlist cover preview"
+                    >
+
+                    <button
+                        id="removeSpotifyCoverBtn"
+                        class="small-soft-button"
+                        type="button">
+                        Remove cover
+                    </button>
+
+                </div>
+
+                <!-- PLAYLIST DETAILS -->
+
+                <label for="spotifyPlaylistName">
+                    Playlist name
+                </label>
+
+                <input
+                    id="spotifyPlaylistName"
+                    type="text"
+                    maxlength="60"
+                    placeholder="Rainy Window"
+                >
+
+                <label for="spotifyPlaylistDescription">
+                    Description
+                </label>
+
+                <textarea
+                    id="spotifyPlaylistDescription"
+                    maxlength="220"
+                    placeholder="Soft songs for quiet rainy afternoons..."></textarea>
+
+                <label for="spotifyPlaylistMood">
+                    Mood
+                </label>
+
+                <select id="spotifyPlaylistMood">
+                    <option value="Cozy">☕ Cozy</option>
+                    <option value="Calm">☁️ Calm</option>
+                    <option value="Happy">🌸 Happy</option>
+                    <option value="Dreamy">🌙 Dreamy</option>
+                    <option value="Study">📚 Study</option>
+                    <option value="Comfort">💌 Comfort</option>
+                </select>
+
+                <label for="spotifyPlaylistLink">
+                    Spotify playlist link
+                </label>
+
+                <input
+                    id="spotifyPlaylistLink"
+                    type="url"
+                    placeholder="https://open.spotify.com/playlist/..."
+                >
+
+                <p class="spotify-link-help">
+                    In Spotify, choose Share → Copy link to playlist.
+                </p>
+
+                <button
+                    id="addSpotifyPlaylistBtn"
+                    class="primary-button"
+                    type="button">
+                    Add Playlist 🎵
+                </button>
+
+                <p
+                    id="spotifyPlaylistMessage"
+                    class="form-message"
+                    aria-live="polite">
+                </p>
+
+            </aside>
+
+            <!-- PLAYLIST COLLECTION -->
+
+            <main class="spotify-playlist-collection-card">
+
+                <div class="spotify-collection-heading">
+
+                    <div>
+                        <h3>Your Collection</h3>
+
+                        <p>
+                            Choose a playlist and press play.
+                        </p>
+                    </div>
+
+                    <button
+                        id="clearSpotifyPlaylistsBtn"
+                        class="small-soft-button"
+                        type="button">
+                        Clear all
+                    </button>
+
+                </div>
+
+                <div class="spotify-playlist-tools">
+
+                    <input
+                        id="spotifyPlaylistSearch"
+                        type="search"
+                        placeholder="Search playlists..."
+                    >
+
+                    <select id="spotifyPlaylistSort">
+                        <option value="newest">Newest first</option>
+                        <option value="oldest">Oldest first</option>
+                        <option value="name">Name A–Z</option>
+                        <option value="favorites">Favorites first</option>
+                    </select>
+
+                </div>
+
+                <div
+                    id="spotifyEmptyState"
+                    class="spotify-empty-state">
+
+                    <div class="spotify-empty-icon">🎧</div>
+
+                    <h4>Your collection is waiting</h4>
+
+                    <p>
+                        Add your first Spotify playlist.
+                    </p>
+
+                </div>
+
+                <div
+                    id="spotifyPlaylistCollection"
+                    class="spotify-playlist-grid">
+                </div>
+
+            </main>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- =========================================
+     SPOTIFY PLAYLIST MODAL
+========================================= -->
+
+<div
+    id="spotifyPlaylistModal"
+    class="spotify-modal hidden"
+    role="dialog"
+    aria-modal="true"
+    aria-labelledby="spotifyModalName">
+
+    <div class="spotify-modal-backdrop"></div>
+
+    <div class="spotify-modal-content">
+
+        <button
+            id="closeSpotifyModalBtn"
+            class="spotify-modal-close"
+            type="button"
+            aria-label="Close playlist">
+            ×
+        </button>
+
+        <div class="spotify-modal-information">
+
+            <img
+                id="spotifyModalCover"
+                class="spotify-modal-cover"
+                src=""
+                alt="Playlist cover"
+            >
+
+            <div class="spotify-modal-text">
+
+                <span
+                    id="spotifyModalMood"
+                    class="spotify-modal-mood">
+                </span>
+
+                <h3 id="spotifyModalName"></h3>
+
+                <p id="spotifyModalDescription"></p>
+
+                <div class="spotify-modal-actions">
+
+                    <a
+                        id="openSpotifyPlaylistBtn"
+                        class="spotify-open-button"
+                        href="#"
+                        target="_blank"
+                        rel="noopener noreferrer">
+                        Open in Spotify
+                    </a>
+
+                    <button
+                        id="favoriteSpotifyPlaylistBtn"
+                        class="small-soft-button"
+                        type="button">
+                        ♡ Favorite
+                    </button>
+
+                    <button
+                        id="deleteSpotifyPlaylistBtn"
+                        class="small-soft-button danger-soft-button"
+                        type="button">
+                        Delete
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <div
+            id="spotifyEmbedContainer"
+            class="spotify-embed-container">
+        </div>
+
+        <p class="spotify-player-note">
+            Spotify may ask you to sign in for full playback.
+        </p>
+
+    </div>
+
+</div>
+
+<!-- REMINDERS -->
+
+<!-- ================= REMINDERS PAGE ================= -->
+
+<!-- ================= REMINDERS PAGE ================= -->
+
+<section id="reminders" class="page">
+
+    <div class="page-heading">
+
+        <div>
+            <p class="small-heading">
+                a little note for today
+            </p>
+
+            <h2>💌 Gentle Reminder</h2>
+
+            <p class="page-description">
+                A soft reminder that changes every day.
+            </p>
+        </div>
+
+    </div>
+
+    <div class="daily-reminders-page">
+
+        <div class="main-reminder-card">
+
+            <div class="reminder-decoration">
+                💌
+            </div>
+
+            <p class="reminder-label">
+                Today's reminder
+            </p>
+
+            <p id="dailyReminder" class="main-reminder-text">
+                Loading today's reminder...
+            </p>
+
+            <p class="reminder-small-text">
+                Come back tomorrow for a new one 🌷
+            </p>
+
+        </div>
+
+        <div class="reminder-mini-grid">
+
+            <div class="reminder-mini-card">
+                <span>☁️</span>
+
+                <p>
+                    You do not have to rush today.
+                </p>
+            </div>
+
+            <div class="reminder-mini-card">
+                <span>🌸</span>
+
+                <p>
+                    Small moments can still make a beautiful day.
+                </p>
+            </div>
+
+            <div class="reminder-mini-card">
+                <span>☕</span>
+
+                <p>
+                    Make a little time for something comforting.
+                </p>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- COZY -->
+
+<!-- ================= COZY DAY IDEAS ================= -->
+
+<section id="cozy" class="page">
+
+    <div class="page-heading">
+
+        <div>
+            <p class="small-heading">
+                little ways to make an ordinary day feel special
+            </p>
+
+            <h2>☕ Cozy Day Ideas</h2>
+
+            <p class="page-description">
+                Pick a little idea whenever you want to make
+                your day softer, calmer, or just a bit more fun.
+            </p>
+        </div>
+
+    </div>
+    
+
+    <!-- CATEGORY BUTTONS -->
+
+    <div class="cozy-categories">
+
+        <button
+            class="cozy-category-button active-cozy-category"
+            type="button"
+            data-cozy-category="All"
+        >
+            ✨ All
+        </button>
+
+        <button
+            class="cozy-category-button"
+            type="button"
+            data-cozy-category="Relax"
+        >
+            ☁️ Relax
+        </button>
+
+        <button
+            class="cozy-category-button"
+            type="button"
+            data-cozy-category="Creative"
+        >
+            🎨 Creative
+        </button>
+
+        <button
+            class="cozy-category-button"
+            type="button"
+            data-cozy-category="Entertainment"
+        >
+            🎬 Entertainment
+        </button>
+
+        <button
+            class="cozy-category-button"
+            type="button"
+            data-cozy-category="Little Joys"
+        >
+            🌷 Little Joys
+        </button>
+
+        <button
+            class="cozy-category-button"
+            type="button"
+            data-cozy-category="Reset"
+        >
+            🫧 Reset
+        </button>
+
+    </div>
+
+
+    <!-- COZY IDEAS GRID -->
+
+    <div class="cozy-ideas-grid">
+
+
+        <!-- RELAX -->
+
+        <article
+    class="cozy-idea-card"
+    data-category="Relax"
+    data-cozy-idea="cozy-drink"
+>
+            <span class="cozy-idea-icon">
+                ☕
+            </span>
+
+            <span class="cozy-idea-category">
+                Relax
+            </span>
+
+            <h3>Make a cozy drink</h3>
+
+            <p>
+                Make your favorite warm drink,
+                grab your comfiest blanket,
+                and enjoy a quiet moment.
+            </p>
+        </article>
+
+
+        <article
+    class="cozy-idea-card"
+    data-category="Relax"
+    data-cozy-idea="rainy-window"
+>
+            <span class="cozy-idea-icon">
+                🌧️
+            </span>
+
+            <span class="cozy-idea-category">
+                Relax
+            </span>
+
+            <h3>Rainy window moment</h3>
+
+            <p>
+                Put on rain sounds, dim the lights,
+                and spend a little while doing absolutely nothing.
+            </p>
+        </article>
+
+
+        <article
+    class="cozy-idea-card"
+    data-category="Relax"
+    data-cozy-idea="reading"
+>
+            <span class="cozy-idea-icon">
+                📖
+            </span>
+
+            <span class="cozy-idea-category">
+                Relax
+            </span>
+
+            <h3>Read somewhere comfy</h3>
+
+            <p>
+                Find the coziest spot in your room
+                and read a few chapters of something you enjoy.
+            </p>
+        </article>
+
+
+        <!-- CREATIVE -->
+
+        <article
+    class="cozy-idea-card"
+    data-category="Creative"
+    data-cozy-idea="mood-board"
+>
+            <span class="cozy-idea-icon">
+                🎨
+            </span>
+
+            <span class="cozy-idea-category">
+                Creative
+            </span>
+
+            <h3>Make a mood board</h3>
+
+            <p>
+                Collect photos, colors, outfits,
+                rooms and little things that match
+                the mood you love.
+            </p>
+        </article>
+
+
+        <article
+    class="cozy-idea-card"
+    data-category="Creative"
+    data-cozy-idea="journal"
+>
+            <span class="cozy-idea-icon">
+                📓
+            </span>
+
+            <span class="cozy-idea-category">
+                Creative
+            </span>
+
+            <h3>Decorate a journal page</h3>
+
+            <p>
+                Add doodles, stickers, little notes,
+                quotes or memories from your day.
+            </p>
+        </article>
+
+
+        <article
+    class="cozy-idea-card"
+    data-category="Creative"
+    data-cozy-idea="playlist"
+>
+            <span class="cozy-idea-icon">
+                🎧
+            </span>
+
+            <span class="cozy-idea-category">
+                Creative
+            </span>
+
+            <h3>Create a new playlist</h3>
+
+            <p>
+                Choose a tiny theme like
+                “pink afternoon” or “midnight stars”
+                and find songs that fit it.
+            </p>
+        </article>
+
+
+        <!-- ENTERTAINMENT -->
+
+        <article
+    class="cozy-idea-card"
+    data-category="Entertainment"
+    data-cozy-idea="comfort-show"
+>
+            <span class="cozy-idea-icon">
+                🎬
+            </span>
+
+            <span class="cozy-idea-category">
+                Entertainment
+            </span>
+
+            <h3>Have a comfort-show afternoon</h3>
+
+            <p>
+                Pick a show you already love,
+                get some snacks, and watch a few favorite episodes.
+            </p>
+        </article>
+
+
+        <article
+    class="cozy-idea-card"
+    data-category="Entertainment"
+    data-cozy-idea="movie-night"
+>
+            <span class="cozy-idea-icon">
+                🍿
+            </span>
+
+            <span class="cozy-idea-category">
+                Entertainment
+            </span>
+
+            <h3>Make your room a cinema</h3>
+
+            <p>
+                Close the curtains, make popcorn,
+                turn off the big lights,
+                and choose a feel-good movie.
+            </p>
+        </article>
+
+
+        <article
+    class="cozy-idea-card"
+    data-category="Entertainment"
+    data-cozy-idea="relaxing-game"
+>
+            <span class="cozy-idea-icon">
+                🎮
+            </span>
+
+            <span class="cozy-idea-category">
+                Entertainment
+            </span>
+
+            <h3>Play something relaxing</h3>
+
+            <p>
+                Put on some music and play
+                a game you find fun and comforting.
+            </p>
+        </article>
+
+
+        <!-- LITTLE JOYS -->
+
+        <article
+    class="cozy-idea-card"
+    data-category="Little Joys"
+    data-cozy-idea="pretty-snack"
+>
+            <span class="cozy-idea-icon">
+                🍓
+            </span>
+
+            <span class="cozy-idea-category">
+                Little Joys
+            </span>
+
+            <h3>Make a pretty snack</h3>
+
+            <p>
+                Put together a snack you like
+                and make it look extra cute on your favorite plate.
+            </p>
+        </article>
+
+
+        <article
+    class="cozy-idea-card"
+    data-category="Little Joys"
+    data-cozy-idea="happy-list"
+>
+            <span class="cozy-idea-icon">
+                💌
+            </span>
+
+            <span class="cozy-idea-category">
+                Little Joys
+            </span>
+
+            <h3>Write a happy little list</h3>
+
+            <p>
+                Write down five tiny things
+                that have made you smile recently.
+            </p>
+        </article>
+
+
+        <article
+    class="cozy-idea-card"
+    data-category="Little Joys"
+    data-cozy-idea="romanticize-day"
+>
+            <span class="cozy-idea-icon">
+                🌸
+            </span>
+
+            <span class="cozy-idea-category">
+                Little Joys
+            </span>
+
+            <h3>Romanticize an ordinary moment</h3>
+
+            <p>
+                Put on a favorite song while
+                making your drink, tidying your desk,
+                or getting ready for the day.
+            </p>
+        </article>
+
+
+        <!-- RESET -->
+
+        <article
+    class="cozy-idea-card"
+    data-category="Reset"
+    data-cozy-idea="room-reset"
+>
+            <span class="cozy-idea-icon">
+                🫧
+            </span>
+
+            <span class="cozy-idea-category">
+                Reset
+            </span>
+
+            <h3>Do a tiny room reset</h3>
+
+            <p>
+                Put away a few things,
+                straighten your blankets,
+                and make your space feel fresh again.
+            </p>
+        </article>
+
+
+        <article
+    class="cozy-idea-card"
+    data-category="Reset"
+    data-cozy-idea="cozy-corner"
+>
+            <span class="cozy-idea-icon">
+                🧺
+            </span>
+
+            <span class="cozy-idea-category">
+                Reset
+            </span>
+
+            <h3>Refresh your cozy corner</h3>
+
+            <p>
+                Rearrange your pillows,
+                choose a blanket,
+                and make one little corner extra comfortable.
+            </p>
+        </article>
+
+
+        <article
+    class="cozy-idea-card"
+    data-category="Reset"
+    data-cozy-idea="slow-evening"
+>
+            <span class="cozy-idea-icon">
+                🌙
+            </span>
+
+            <span class="cozy-idea-category">
+                Reset
+            </span>
+
+            <h3>Have a slow evening</h3>
+
+            <p>
+                Change into comfy clothes,
+                lower the lights,
+                put your phone aside for a bit,
+                and choose something quiet to do.
+            </p>
+        </article>
+
+
+    </div>
+    <!-- =========================================
+     COZY DAY DETAIL VIEW
+========================================= -->
+
+<div
+    id="cozyDetailView"
+    class="cozy-detail-view hidden"
+>
+
+    <!-- BACK BUTTON -->
+
+    <button
+        id="backToCozyIdeasBtn"
+        class="cozy-back-button"
+        type="button"
+    >
+        ← Back to Cozy Day Ideas
+    </button>
+
+
+    <!-- HERO -->
+
+    <div class="cozy-detail-hero">
+
+        <span
+            id="cozyDetailIcon"
+            class="cozy-detail-icon"
+        >
+            ☕
+        </span>
+
+        <p
+            id="cozyDetailCategory"
+            class="cozy-detail-category"
+        >
+            Relax
+        </p>
+
+        <h2 id="cozyDetailTitle">
+            Make a Cozy Drink
+        </h2>
+
+        <p id="cozyDetailIntro">
+            A cozy little afternoon made extra special.
+        </p>
+
+    </div>
+
+
+    <!-- MAIN DESCRIPTION -->
+
+    <div class="cozy-detail-section cozy-detail-main">
+
+        <p class="small-heading">
+            ✨ the idea
+        </p>
+
+        <h3>
+            Make this moment yours
+        </h3>
+
+        <p id="cozyDetailDescription">
+        </p>
+
+    </div>
+
+
+    <!-- WATCH + READ -->
+
+    <div class="cozy-detail-two-columns">
+
+        <div class="cozy-detail-section">
+
+            <p class="small-heading">
+                🎬 watch
+            </p>
+
+            <h3>
+                Something cozy to watch
+            </h3>
+
+            <div
+                id="cozyWatchRecommendations"
+                class="cozy-recommendation-list"
+            >
+            </div>
+
+        </div>
+
+
+        <div class="cozy-detail-section">
+
+            <p class="small-heading">
+                📚 read
+            </p>
+
+            <h3>
+                Something cozy to read
+            </h3>
+
+            <div
+                id="cozyBookRecommendations"
+                class="cozy-recommendation-list"
+            >
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- FOOD + DRINK -->
+
+    <div class="cozy-detail-two-columns">
+
+        <div class="cozy-detail-section">
+
+            <p class="small-heading">
+                🍓 something to eat
+            </p>
+
+            <h3>
+                Snack ideas
+            </h3>
+
+            <div
+                id="cozyFoodRecommendations"
+                class="cozy-recommendation-list"
+            >
+            </div>
+
+        </div>
+
+
+        <div class="cozy-detail-section">
+
+            <p class="small-heading">
+                ☕ something to drink
+            </p>
+
+            <h3>
+                Drink ideas
+            </h3>
+
+            <div
+                id="cozyDrinkRecommendations"
+                class="cozy-recommendation-list"
+            >
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- LITTLE EXTRAS -->
+
+    <div class="cozy-detail-section">
+
+        <p class="small-heading">
+            🎀 little extras
+        </p>
+
+        <h3>
+            Make it even cozier
+        </h3>
+
+        <div
+            id="cozyExtraRecommendations"
+            class="cozy-extra-grid"
+        >
+        </div>
+
+    </div>
+
+
+    <!-- PHOTOS -->
+
+    <div class="cozy-detail-section">
+
+        <p class="small-heading">
+            📌 inspiration
+        </p>
+
+        <h3>
+            The mood
+        </h3>
+
+        <p class="cozy-detail-photo-description">
+            A little visual inspiration for your cozy day.
+        </p>
+
+        <div class="cozy-detail-photo-grid">
+
+            <img
+                id="cozyDetailPhoto1"
+                src=""
+                alt="Cozy day inspiration"
+            >
+
+            <img
+                id="cozyDetailPhoto2"
+                src=""
+                alt="Cozy day inspiration"
+            >
+
+            <img
+                id="cozyDetailPhoto3"
+                src=""
+                alt="Cozy day inspiration"
+            >
+
+        </div>
+
+    </div>
+
+
+    <!-- BOTTOM BACK BUTTON -->
+
+    <button
+        id="bottomBackToCozyIdeasBtn"
+        class="cozy-back-button cozy-bottom-back-button"
+        type="button"
+    >
+        ← Back to Cozy Day Ideas
+    </button>
+
+</div>
+
+</section>
+
+<script src="script.js"></script>
+
+</body>
+</html>
