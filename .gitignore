@@ -1,1 +1,6 @@
 .DS_Store
+config.js
+config.local.js
+*.local
+.env
+.env.*
