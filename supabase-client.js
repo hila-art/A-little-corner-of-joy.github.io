@@ -158,7 +158,8 @@ const JoyCloud = (function createJoyCloud() {
         const { error } = await supabase.auth.signInWithOtp({
             email,
             options: {
-                shouldCreateUser: true
+                shouldCreateUser: true,
+                emailRedirectTo: window.location.href
             }
         });
 
