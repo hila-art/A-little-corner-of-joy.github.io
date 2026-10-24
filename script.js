@@ -5207,3 +5207,5 @@ cozyDetailPhotos.forEach(
 
     }
 );
+
+startWebsite();
