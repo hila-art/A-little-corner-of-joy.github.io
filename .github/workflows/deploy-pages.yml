@@ -1,0 +1,68 @@
+name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Configure GitHub Pages
+        uses: actions/configure-pages@v5
+
+      - name: Build static site
+        env:
+          JOY_SUPABASE_URL: ${{ vars.JOY_SUPABASE_URL }}
+          JOY_SUPABASE_ANON_KEY: ${{ vars.JOY_SUPABASE_ANON_KEY }}
+        run: |
+          set -eu
+          : "${JOY_SUPABASE_URL:?Add JOY_SUPABASE_URL to the github-pages environment variables}"
+          : "${JOY_SUPABASE_ANON_KEY:?Add JOY_SUPABASE_ANON_KEY to the github-pages environment variables}"
+
+          mkdir -p _site
+          cp index.html script.js style.css supabase-client.js _site/
+          cp -R images _site/images
+
+          python3 - <<'PY'
+          import json
+          import os
+          from pathlib import Path
+
+          url = os.environ["JOY_SUPABASE_URL"]
+          key = os.environ["JOY_SUPABASE_ANON_KEY"]
+          if not url.startswith("https://"):
+              raise SystemExit("JOY_SUPABASE_URL must start with https://")
+
+          config = (
+              f"window.JOY_SUPABASE_URL = {json.dumps(url)};\n"
+              f"window.JOY_SUPABASE_ANON_KEY = {json.dumps(key)};\n"
+          )
+          Path("_site/config.js").write_text(config, encoding="utf-8")
+          PY
+
+      - name: Upload site artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
