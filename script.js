@@ -691,6 +691,14 @@ async function startWebsite() {
 
     const session = await JoyCloud.getSession();
 
+    if (/^#(?:access_token=|error=|code=)/.test(window.location.hash)) {
+        window.history.replaceState(
+            null,
+            document.title,
+            `${window.location.pathname}${window.location.search}`
+        );
+    }
+
     if (session) {
         await continueAfterSignIn();
     }

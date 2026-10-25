@@ -155,11 +155,14 @@ const JoyCloud = (function createJoyCloud() {
 
     async function sendMagicCode(email) {
         const supabase = getClient();
+        const redirectUrl =
+            `${window.location.origin}${window.location.pathname}`;
+
         const { error } = await supabase.auth.signInWithOtp({
             email,
             options: {
                 shouldCreateUser: true,
-                emailRedirectTo: window.location.href
+                emailRedirectTo: redirectUrl
             }
         });
 
